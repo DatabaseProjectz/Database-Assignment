@@ -16,5 +16,11 @@ namespace DatabaseManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnIssueBooks_Click(object sender, EventArgs e)
+        {
+            ISSUE i = new ISSUE();
+            i.Show();
+        }
     }
 }

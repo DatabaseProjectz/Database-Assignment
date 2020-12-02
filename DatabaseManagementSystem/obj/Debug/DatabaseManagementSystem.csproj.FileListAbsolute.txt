@@ -8,5 +8,5 @@ D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\D
 D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csproj.CoreCompileInputs.cache
 D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.exe
 D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.pdb
-D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.Form2.resources
 D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.BACKGROUND.resources
+D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.ISSUE.resources

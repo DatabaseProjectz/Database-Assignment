@@ -133,6 +133,7 @@
             this.btnIssueBooks.TabIndex = 2;
             this.btnIssueBooks.Text = "ISSUE BOOKS";
             this.btnIssueBooks.UseVisualStyleBackColor = false;
+            this.btnIssueBooks.Click += new System.EventHandler(this.btnIssueBooks_Click);
             // 
             // btnStudent
             // 

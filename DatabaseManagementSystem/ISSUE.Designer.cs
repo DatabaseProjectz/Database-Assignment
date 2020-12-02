@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ISSUE));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.tdpBookIssue = new System.Windows.Forms.DateTimePicker();
@@ -272,6 +273,8 @@
             // 
             // imgStudent
             // 
+            this.imgStudent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgStudent.BackgroundImage")));
+            this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgStudent.Location = new System.Drawing.Point(134, 65);
             this.imgStudent.Name = "imgStudent";
             this.imgStudent.Size = new System.Drawing.Size(124, 114);

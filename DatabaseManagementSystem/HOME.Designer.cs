@@ -50,28 +50,28 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.BackColor = System.Drawing.Color.PeachPuff;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(338, 224);
+            this.button1.Location = new System.Drawing.Point(404, 298);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 143);
+            this.button1.Size = new System.Drawing.Size(178, 82);
             this.button1.TabIndex = 0;
             this.button1.Text = "ADMIN";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button2.BackColor = System.Drawing.Color.PeachPuff;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Maroon;
-            this.button2.Location = new System.Drawing.Point(729, 224);
+            this.button2.Location = new System.Drawing.Point(731, 298);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 143);
+            this.button2.Size = new System.Drawing.Size(178, 82);
             this.button2.TabIndex = 1;
             this.button2.Text = "LIBRARIAN";
             this.button2.UseVisualStyleBackColor = false;

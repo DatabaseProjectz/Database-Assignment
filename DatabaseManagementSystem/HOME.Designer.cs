@@ -45,7 +45,7 @@
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 646);
+            this.panel1.Size = new System.Drawing.Size(1367, 788);
             this.panel1.TabIndex = 0;
             // 
             // button1

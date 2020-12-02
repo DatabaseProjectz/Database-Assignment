@@ -282,10 +282,10 @@
             // 
             this.pnlTop.Controls.Add(this.button1);
             this.pnlTop.Controls.Add(this.lblBookIssue);
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(831, 554);
+            this.pnlTop.Size = new System.Drawing.Size(831, 73);
             this.pnlTop.TabIndex = 0;
             // 
             // lblBookIssue
@@ -336,6 +336,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ISSUE";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);

@@ -265,7 +265,7 @@
             // 
             this.lblIsbnNo.AutoSize = true;
             this.lblIsbnNo.ForeColor = System.Drawing.Color.White;
-            this.lblIsbnNo.Location = new System.Drawing.Point(114, 247);
+            this.lblIsbnNo.Location = new System.Drawing.Point(108, 247);
             this.lblIsbnNo.Name = "lblIsbnNo";
             this.lblIsbnNo.Size = new System.Drawing.Size(54, 13);
             this.lblIsbnNo.TabIndex = 1;
@@ -296,7 +296,7 @@
             this.lblBookIssue.AutoSize = true;
             this.lblBookIssue.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookIssue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblBookIssue.Location = new System.Drawing.Point(306, 21);
+            this.lblBookIssue.Location = new System.Drawing.Point(312, 21);
             this.lblBookIssue.Name = "lblBookIssue";
             this.lblBookIssue.Size = new System.Drawing.Size(180, 31);
             this.lblBookIssue.TabIndex = 0;

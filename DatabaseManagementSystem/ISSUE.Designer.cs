@@ -55,6 +55,7 @@
             this.lblBookIssue = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbBookName = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
@@ -77,6 +78,7 @@
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnlRight.Controls.Add(this.label1);
             this.pnlRight.Controls.Add(this.cmbBookName);
             this.pnlRight.Controls.Add(this.tdpBookIssue);
             this.pnlRight.Controls.Add(this.btnIssue);
@@ -331,6 +333,17 @@
             this.cmbBookName.Size = new System.Drawing.Size(181, 21);
             this.cmbBookName.TabIndex = 19;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(50, 456);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(337, 16);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Maximum 3 books can be issued to one student.";
+            // 
             // ISSUE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,5 +394,6 @@
         private System.Windows.Forms.DateTimePicker tdpBookIssue;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbBookName;
+        private System.Windows.Forms.Label label1;
     }
 }

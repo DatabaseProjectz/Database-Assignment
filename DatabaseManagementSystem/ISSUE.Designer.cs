@@ -53,6 +53,7 @@
             this.imgStudent = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblBookIssue = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
@@ -286,6 +287,7 @@
             // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.button1);
             this.pnlTop.Controls.Add(this.lblBookIssue);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -303,6 +305,21 @@
             this.lblBookIssue.Size = new System.Drawing.Size(180, 31);
             this.lblBookIssue.TabIndex = 0;
             this.lblBookIssue.Text = "ISSUE BOOK";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(803, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ISSUE
             // 
@@ -352,5 +369,6 @@
         private System.Windows.Forms.Label lblBookName;
         private System.Windows.Forms.Button btnIssue;
         private System.Windows.Forms.DateTimePicker tdpBookIssue;
+        private System.Windows.Forms.Button button1;
     }
 }

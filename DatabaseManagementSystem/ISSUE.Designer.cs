@@ -32,7 +32,6 @@
             this.pnlRight = new System.Windows.Forms.Panel();
             this.tdpBookIssue = new System.Windows.Forms.DateTimePicker();
             this.btnIssue = new System.Windows.Forms.Button();
-            this.txtBookName = new System.Windows.Forms.TextBox();
             this.lblBookIssueDate = new System.Windows.Forms.Label();
             this.lblBookName = new System.Windows.Forms.Label();
             this.txtStudentEmail = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblBookIssue = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmbBookName = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
@@ -76,9 +76,9 @@
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnlRight.Controls.Add(this.cmbBookName);
             this.pnlRight.Controls.Add(this.tdpBookIssue);
             this.pnlRight.Controls.Add(this.btnIssue);
-            this.pnlRight.Controls.Add(this.txtBookName);
             this.pnlRight.Controls.Add(this.lblBookIssueDate);
             this.pnlRight.Controls.Add(this.lblBookName);
             this.pnlRight.Controls.Add(this.txtStudentEmail);
@@ -99,7 +99,7 @@
             // 
             // tdpBookIssue
             // 
-            this.tdpBookIssue.Location = new System.Drawing.Point(218, 333);
+            this.tdpBookIssue.Location = new System.Drawing.Point(221, 336);
             this.tdpBookIssue.Name = "tdpBookIssue";
             this.tdpBookIssue.Size = new System.Drawing.Size(181, 20);
             this.tdpBookIssue.TabIndex = 18;
@@ -118,13 +118,6 @@
             this.btnIssue.Text = "ISSUE";
             this.btnIssue.UseVisualStyleBackColor = false;
             // 
-            // txtBookName
-            // 
-            this.txtBookName.Location = new System.Drawing.Point(221, 297);
-            this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Size = new System.Drawing.Size(100, 20);
-            this.txtBookName.TabIndex = 15;
-            // 
             // lblBookIssueDate
             // 
             this.lblBookIssueDate.AutoSize = true;
@@ -137,7 +130,7 @@
             // lblBookName
             // 
             this.lblBookName.AutoSize = true;
-            this.lblBookName.Location = new System.Drawing.Point(50, 304);
+            this.lblBookName.Location = new System.Drawing.Point(50, 300);
             this.lblBookName.Name = "lblBookName";
             this.lblBookName.Size = new System.Drawing.Size(105, 13);
             this.lblBookName.TabIndex = 13;
@@ -147,35 +140,35 @@
             // 
             this.txtStudentEmail.Location = new System.Drawing.Point(221, 260);
             this.txtStudentEmail.Name = "txtStudentEmail";
-            this.txtStudentEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtStudentEmail.Size = new System.Drawing.Size(181, 20);
             this.txtStudentEmail.TabIndex = 12;
             // 
             // txtStudentContactNo
             // 
             this.txtStudentContactNo.Location = new System.Drawing.Point(221, 224);
             this.txtStudentContactNo.Name = "txtStudentContactNo";
-            this.txtStudentContactNo.Size = new System.Drawing.Size(100, 20);
+            this.txtStudentContactNo.Size = new System.Drawing.Size(181, 20);
             this.txtStudentContactNo.TabIndex = 11;
             // 
             // txtStudentBatch
             // 
             this.txtStudentBatch.Location = new System.Drawing.Point(221, 185);
             this.txtStudentBatch.Name = "txtStudentBatch";
-            this.txtStudentBatch.Size = new System.Drawing.Size(100, 20);
+            this.txtStudentBatch.Size = new System.Drawing.Size(181, 20);
             this.txtStudentBatch.TabIndex = 10;
             // 
             // txtFaculty
             // 
             this.txtFaculty.Location = new System.Drawing.Point(221, 144);
             this.txtFaculty.Name = "txtFaculty";
-            this.txtFaculty.Size = new System.Drawing.Size(100, 20);
+            this.txtFaculty.Size = new System.Drawing.Size(181, 20);
             this.txtFaculty.TabIndex = 9;
             // 
             // txtStudentName
             // 
             this.txtStudentName.Location = new System.Drawing.Point(221, 106);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(100, 20);
+            this.txtStudentName.Size = new System.Drawing.Size(181, 20);
             this.txtStudentName.TabIndex = 8;
             // 
             // lblStudentEmail
@@ -321,6 +314,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cmbBookName
+            // 
+            this.cmbBookName.FormattingEnabled = true;
+            this.cmbBookName.Items.AddRange(new object[] {
+            "Database Management Studies",
+            "Java",
+            "C#",
+            "C language",
+            "Introduction to Computer Science"});
+            this.cmbBookName.Location = new System.Drawing.Point(221, 297);
+            this.cmbBookName.Name = "cmbBookName";
+            this.cmbBookName.Size = new System.Drawing.Size(181, 21);
+            this.cmbBookName.TabIndex = 19;
+            // 
             // ISSUE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,11 +371,11 @@
         private System.Windows.Forms.Label lblStudentBatch;
         private System.Windows.Forms.Label lblFaculty;
         private System.Windows.Forms.Label lblStudentName;
-        private System.Windows.Forms.TextBox txtBookName;
         private System.Windows.Forms.Label lblBookIssueDate;
         private System.Windows.Forms.Label lblBookName;
         private System.Windows.Forms.Button btnIssue;
         private System.Windows.Forms.DateTimePicker tdpBookIssue;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbBookName;
     }
 }

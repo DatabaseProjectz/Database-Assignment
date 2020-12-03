@@ -56,11 +56,13 @@
             this.pnlTop = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lblBookIssue = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).BeginInit();
             this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -325,6 +327,7 @@
             // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.pictureBox1);
             this.pnlTop.Controls.Add(this.button1);
             this.pnlTop.Controls.Add(this.lblBookIssue);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -353,11 +356,21 @@
             this.lblBookIssue.AutoSize = true;
             this.lblBookIssue.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookIssue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblBookIssue.Location = new System.Drawing.Point(312, 21);
+            this.lblBookIssue.Location = new System.Drawing.Point(403, 20);
             this.lblBookIssue.Name = "lblBookIssue";
             this.lblBookIssue.Size = new System.Drawing.Size(180, 31);
             this.lblBookIssue.TabIndex = 0;
             this.lblBookIssue.Text = "ISSUE BOOK";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(261, -17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // ISSUE
             // 
@@ -378,6 +391,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -411,5 +425,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbBookName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

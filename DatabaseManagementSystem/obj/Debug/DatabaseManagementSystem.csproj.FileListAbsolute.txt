@@ -10,3 +10,16 @@ D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\D
 D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.pdb
 D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.BACKGROUND.resources
 D:\DATABASE_ASSIGNMENT_GITHUB\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.ISSUE.resources
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\bin\Debug\DatabaseManagementSystem.exe.config
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\bin\Debug\DatabaseManagementSystem.exe
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\bin\Debug\DatabaseManagementSystem.pdb
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csprojAssemblyReference.cache
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.AddBooks.resources
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.ISSUE.resources
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.Form1.resources
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.BACKGROUND.resources
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.Properties.Resources.resources
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csproj.GenerateResource.cache
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.exe
+C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.pdb

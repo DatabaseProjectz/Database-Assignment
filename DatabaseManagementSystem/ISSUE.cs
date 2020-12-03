@@ -80,5 +80,10 @@ namespace DatabaseManagementSystem
                 }
             }
         }
+
+        private void txtStudentName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

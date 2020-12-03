@@ -54,9 +54,9 @@
             this.lblIsbnNo = new System.Windows.Forms.Label();
             this.imgStudent = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblBookIssue = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
@@ -73,8 +73,9 @@
             this.panel1.Controls.Add(this.pnlTop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(831, 554);
+            this.panel1.Size = new System.Drawing.Size(1108, 682);
             this.panel1.TabIndex = 0;
             // 
             // pnlRight
@@ -97,9 +98,10 @@
             this.pnlRight.Controls.Add(this.lblFaculty);
             this.pnlRight.Controls.Add(this.lblStudentName);
             this.pnlRight.Controls.Add(this.lblDetails);
-            this.pnlRight.Location = new System.Drawing.Point(401, 73);
+            this.pnlRight.Location = new System.Drawing.Point(535, 90);
+            this.pnlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(430, 481);
+            this.pnlRight.Size = new System.Drawing.Size(573, 592);
             this.pnlRight.TabIndex = 2;
             // 
             // label1
@@ -107,9 +109,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(50, 451);
+            this.label1.Location = new System.Drawing.Point(67, 555);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 16);
+            this.label1.Size = new System.Drawing.Size(413, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "Maximum 3 books can be issued to one student.";
             // 
@@ -123,17 +126,19 @@
             "C#",
             "C language",
             "Introduction to Computer Science"});
-            this.cmbBookName.Location = new System.Drawing.Point(182, 279);
+            this.cmbBookName.Location = new System.Drawing.Point(243, 343);
+            this.cmbBookName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBookName.Name = "cmbBookName";
-            this.cmbBookName.Size = new System.Drawing.Size(220, 24);
+            this.cmbBookName.Size = new System.Drawing.Size(292, 28);
             this.cmbBookName.TabIndex = 19;
             // 
             // tdpBookIssue
             // 
             this.tdpBookIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdpBookIssue.Location = new System.Drawing.Point(182, 320);
+            this.tdpBookIssue.Location = new System.Drawing.Point(243, 394);
+            this.tdpBookIssue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tdpBookIssue.Name = "tdpBookIssue";
-            this.tdpBookIssue.Size = new System.Drawing.Size(220, 22);
+            this.tdpBookIssue.Size = new System.Drawing.Size(292, 26);
             this.tdpBookIssue.TabIndex = 18;
             // 
             // btnIssue
@@ -143,9 +148,10 @@
             this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIssue.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssue.ForeColor = System.Drawing.Color.White;
-            this.btnIssue.Location = new System.Drawing.Point(163, 384);
+            this.btnIssue.Location = new System.Drawing.Point(217, 473);
+            this.btnIssue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIssue.Name = "btnIssue";
-            this.btnIssue.Size = new System.Drawing.Size(124, 40);
+            this.btnIssue.Size = new System.Drawing.Size(165, 49);
             this.btnIssue.TabIndex = 17;
             this.btnIssue.Text = "ISSUE";
             this.btnIssue.UseVisualStyleBackColor = false;
@@ -154,9 +160,10 @@
             // 
             this.lblBookIssueDate.AutoSize = true;
             this.lblBookIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookIssueDate.Location = new System.Drawing.Point(34, 321);
+            this.lblBookIssueDate.Location = new System.Drawing.Point(45, 395);
+            this.lblBookIssueDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBookIssueDate.Name = "lblBookIssueDate";
-            this.lblBookIssueDate.Size = new System.Drawing.Size(131, 16);
+            this.lblBookIssueDate.Size = new System.Drawing.Size(173, 20);
             this.lblBookIssueDate.TabIndex = 14;
             this.lblBookIssueDate.Text = "Book Issue Date      : ";
             // 
@@ -164,59 +171,67 @@
             // 
             this.lblBookName.AutoSize = true;
             this.lblBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookName.Location = new System.Drawing.Point(34, 282);
+            this.lblBookName.Location = new System.Drawing.Point(45, 347);
+            this.lblBookName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBookName.Name = "lblBookName";
-            this.lblBookName.Size = new System.Drawing.Size(128, 16);
+            this.lblBookName.Size = new System.Drawing.Size(176, 20);
             this.lblBookName.TabIndex = 13;
             this.lblBookName.Text = "Book Name               :";
             // 
             // txtStudentEmail
             // 
             this.txtStudentEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentEmail.Location = new System.Drawing.Point(182, 242);
+            this.txtStudentEmail.Location = new System.Drawing.Point(243, 298);
+            this.txtStudentEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStudentEmail.Name = "txtStudentEmail";
-            this.txtStudentEmail.Size = new System.Drawing.Size(220, 22);
+            this.txtStudentEmail.Size = new System.Drawing.Size(292, 26);
             this.txtStudentEmail.TabIndex = 12;
             // 
             // txtStudentContactNo
             // 
             this.txtStudentContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentContactNo.Location = new System.Drawing.Point(182, 205);
+            this.txtStudentContactNo.Location = new System.Drawing.Point(243, 252);
+            this.txtStudentContactNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStudentContactNo.Name = "txtStudentContactNo";
-            this.txtStudentContactNo.Size = new System.Drawing.Size(220, 22);
+            this.txtStudentContactNo.Size = new System.Drawing.Size(292, 26);
             this.txtStudentContactNo.TabIndex = 11;
             // 
             // txtStudentBatch
             // 
             this.txtStudentBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentBatch.Location = new System.Drawing.Point(182, 168);
+            this.txtStudentBatch.Location = new System.Drawing.Point(243, 207);
+            this.txtStudentBatch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStudentBatch.Name = "txtStudentBatch";
-            this.txtStudentBatch.Size = new System.Drawing.Size(220, 22);
+            this.txtStudentBatch.Size = new System.Drawing.Size(292, 26);
             this.txtStudentBatch.TabIndex = 10;
             // 
             // txtFaculty
             // 
             this.txtFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFaculty.Location = new System.Drawing.Point(182, 130);
+            this.txtFaculty.Location = new System.Drawing.Point(243, 160);
+            this.txtFaculty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFaculty.Name = "txtFaculty";
-            this.txtFaculty.Size = new System.Drawing.Size(220, 22);
+            this.txtFaculty.Size = new System.Drawing.Size(292, 26);
             this.txtFaculty.TabIndex = 9;
             // 
             // txtStudentName
             // 
             this.txtStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentName.Location = new System.Drawing.Point(182, 92);
+            this.txtStudentName.Location = new System.Drawing.Point(243, 113);
+            this.txtStudentName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(220, 22);
+            this.txtStudentName.Size = new System.Drawing.Size(292, 26);
             this.txtStudentName.TabIndex = 8;
+            this.txtStudentName.TextChanged += new System.EventHandler(this.txtStudentName_TextChanged);
             // 
             // lblStudentEmail
             // 
             this.lblStudentEmail.AutoSize = true;
             this.lblStudentEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentEmail.Location = new System.Drawing.Point(34, 245);
+            this.lblStudentEmail.Location = new System.Drawing.Point(45, 302);
+            this.lblStudentEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentEmail.Name = "lblStudentEmail";
-            this.lblStudentEmail.Size = new System.Drawing.Size(129, 16);
+            this.lblStudentEmail.Size = new System.Drawing.Size(178, 20);
             this.lblStudentEmail.TabIndex = 7;
             this.lblStudentEmail.Text = "Student Email            :";
             // 
@@ -224,9 +239,10 @@
             // 
             this.lblStudentContactNo.AutoSize = true;
             this.lblStudentContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentContactNo.Location = new System.Drawing.Point(34, 208);
+            this.lblStudentContactNo.Location = new System.Drawing.Point(45, 256);
+            this.lblStudentContactNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentContactNo.Name = "lblStudentContactNo";
-            this.lblStudentContactNo.Size = new System.Drawing.Size(128, 16);
+            this.lblStudentContactNo.Size = new System.Drawing.Size(165, 20);
             this.lblStudentContactNo.TabIndex = 6;
             this.lblStudentContactNo.Text = "Student Contact No :";
             // 
@@ -234,9 +250,10 @@
             // 
             this.lblStudentBatch.AutoSize = true;
             this.lblStudentBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentBatch.Location = new System.Drawing.Point(34, 171);
+            this.lblStudentBatch.Location = new System.Drawing.Point(45, 210);
+            this.lblStudentBatch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentBatch.Name = "lblStudentBatch";
-            this.lblStudentBatch.Size = new System.Drawing.Size(126, 16);
+            this.lblStudentBatch.Size = new System.Drawing.Size(175, 20);
             this.lblStudentBatch.TabIndex = 5;
             this.lblStudentBatch.Text = "Student Batch           :";
             // 
@@ -244,9 +261,10 @@
             // 
             this.lblFaculty.AutoSize = true;
             this.lblFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFaculty.Location = new System.Drawing.Point(34, 133);
+            this.lblFaculty.Location = new System.Drawing.Point(45, 164);
+            this.lblFaculty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFaculty.Name = "lblFaculty";
-            this.lblFaculty.Size = new System.Drawing.Size(126, 16);
+            this.lblFaculty.Size = new System.Drawing.Size(188, 20);
             this.lblFaculty.TabIndex = 4;
             this.lblFaculty.Text = "Faculty                        :";
             // 
@@ -254,9 +272,10 @@
             // 
             this.lblStudentName.AutoSize = true;
             this.lblStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentName.Location = new System.Drawing.Point(34, 95);
+            this.lblStudentName.Location = new System.Drawing.Point(45, 117);
+            this.lblStudentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(126, 16);
+            this.lblStudentName.Size = new System.Drawing.Size(170, 20);
             this.lblStudentName.TabIndex = 3;
             this.lblStudentName.Text = "Student Name          :";
             // 
@@ -265,9 +284,10 @@
             this.lblDetails.AutoSize = true;
             this.lblDetails.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblDetails.Location = new System.Drawing.Point(158, 19);
+            this.lblDetails.Location = new System.Drawing.Point(211, 23);
+            this.lblDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(113, 26);
+            this.lblDetails.Size = new System.Drawing.Size(145, 35);
             this.lblDetails.TabIndex = 2;
             this.lblDetails.Text = "DETAILS";
             // 
@@ -278,9 +298,10 @@
             this.pnlLeft.Controls.Add(this.txtIsbnNo);
             this.pnlLeft.Controls.Add(this.lblIsbnNo);
             this.pnlLeft.Controls.Add(this.imgStudent);
-            this.pnlLeft.Location = new System.Drawing.Point(0, 73);
+            this.pnlLeft.Location = new System.Drawing.Point(0, 90);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(401, 481);
+            this.pnlLeft.Size = new System.Drawing.Size(535, 592);
             this.pnlLeft.TabIndex = 1;
             // 
             // btnSearch
@@ -290,9 +311,10 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(134, 312);
+            this.btnSearch.Location = new System.Drawing.Point(179, 384);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(124, 40);
+            this.btnSearch.Size = new System.Drawing.Size(165, 49);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -300,18 +322,20 @@
             // 
             // txtIsbnNo
             // 
-            this.txtIsbnNo.Location = new System.Drawing.Point(197, 244);
+            this.txtIsbnNo.Location = new System.Drawing.Point(263, 300);
+            this.txtIsbnNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIsbnNo.Name = "txtIsbnNo";
-            this.txtIsbnNo.Size = new System.Drawing.Size(100, 20);
+            this.txtIsbnNo.Size = new System.Drawing.Size(132, 22);
             this.txtIsbnNo.TabIndex = 2;
             // 
             // lblIsbnNo
             // 
             this.lblIsbnNo.AutoSize = true;
             this.lblIsbnNo.ForeColor = System.Drawing.Color.White;
-            this.lblIsbnNo.Location = new System.Drawing.Point(108, 247);
+            this.lblIsbnNo.Location = new System.Drawing.Point(144, 304);
+            this.lblIsbnNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIsbnNo.Name = "lblIsbnNo";
-            this.lblIsbnNo.Size = new System.Drawing.Size(54, 13);
+            this.lblIsbnNo.Size = new System.Drawing.Size(68, 17);
             this.lblIsbnNo.TabIndex = 1;
             this.lblIsbnNo.Text = "ISBN NO:";
             // 
@@ -319,9 +343,10 @@
             // 
             this.imgStudent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgStudent.BackgroundImage")));
             this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgStudent.Location = new System.Drawing.Point(134, 65);
+            this.imgStudent.Location = new System.Drawing.Point(179, 80);
+            this.imgStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgStudent.Name = "imgStudent";
-            this.imgStudent.Size = new System.Drawing.Size(124, 114);
+            this.imgStudent.Size = new System.Drawing.Size(165, 140);
             this.imgStudent.TabIndex = 0;
             this.imgStudent.TabStop = false;
             // 
@@ -332,9 +357,21 @@
             this.pnlTop.Controls.Add(this.lblBookIssue);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(831, 554);
+            this.pnlTop.Size = new System.Drawing.Size(1108, 682);
             this.pnlTop.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(348, -21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
@@ -343,9 +380,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(803, 3);
+            this.button1.Location = new System.Drawing.Point(1071, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.Size = new System.Drawing.Size(33, 28);
             this.button1.TabIndex = 19;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -356,29 +394,21 @@
             this.lblBookIssue.AutoSize = true;
             this.lblBookIssue.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookIssue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblBookIssue.Location = new System.Drawing.Point(403, 20);
+            this.lblBookIssue.Location = new System.Drawing.Point(537, 25);
+            this.lblBookIssue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBookIssue.Name = "lblBookIssue";
-            this.lblBookIssue.Size = new System.Drawing.Size(180, 31);
+            this.lblBookIssue.Size = new System.Drawing.Size(226, 38);
             this.lblBookIssue.TabIndex = 0;
             this.lblBookIssue.Text = "ISSUE BOOK";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(261, -17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // ISSUE
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 554);
+            this.ClientSize = new System.Drawing.Size(1108, 682);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ISSUE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

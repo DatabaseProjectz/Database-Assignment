@@ -23,3 +23,17 @@ C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSy
 C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.exe
 C:\Users\Dhanuja Supun\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.pdb
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\bin\Debug\DatabaseManagementSystem.exe.config
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\bin\Debug\DatabaseManagementSystem.exe
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\bin\Debug\DatabaseManagementSystem.pdb
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csprojAssemblyReference.cache
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.AddBooks.resources
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.ISSUE.resources
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.Form1.resources
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.BACKGROUND.resources
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.Properties.Resources.resources
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.ReturnBook.resources
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csproj.GenerateResource.cache
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.exe
+C:\Users\samad\Documents\GitHub\Database-Assignment\DatabaseManagementSystem\obj\Debug\DatabaseManagementSystem.pdb

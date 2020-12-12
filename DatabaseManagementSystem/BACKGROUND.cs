@@ -22,5 +22,11 @@ namespace DatabaseManagementSystem
             ISSUE i = new ISSUE();
             i.Show();
         }
+
+        private void btnReturnBooks_Click(object sender, EventArgs e)
+        {
+            ReturnBook rb = new ReturnBook();
+            rb.Show();
+        }
     }
 }

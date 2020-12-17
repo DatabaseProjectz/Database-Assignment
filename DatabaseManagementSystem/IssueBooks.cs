@@ -93,5 +93,17 @@ namespace DatabaseManagementSystem
         {
 
         }
+
+        private void btnIssue_Click(object sender, EventArgs e)
+        {
+            if(txtCopyNo.Text == "" || txtISBN.Text == "")
+            {
+                MessageBox.Show("Please input all details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+            }
+        }
     }
 }

@@ -284,6 +284,7 @@
             this.btnIssue.TabIndex = 17;
             this.btnIssue.Text = "ISSUE";
             this.btnIssue.UseVisualStyleBackColor = false;
+            this.btnIssue.Click += new System.EventHandler(this.btnIssue_Click);
             // 
             // lblDetails
             // 
@@ -356,6 +357,7 @@
             this.pnlTop.Controls.Add(this.pictureBox1);
             this.pnlTop.Controls.Add(this.btnCancel);
             this.pnlTop.Controls.Add(this.lblBookIssue);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(831, 554);

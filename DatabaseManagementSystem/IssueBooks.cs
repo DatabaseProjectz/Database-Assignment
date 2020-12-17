@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DatabaseManagementSystem
 {
-    public partial class ISSUE : Form
+    public partial class IssueBooks : Form
     {
-        public ISSUE()
+        public IssueBooks()
         {
             InitializeComponent();
         }

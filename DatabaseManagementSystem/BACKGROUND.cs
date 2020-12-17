@@ -28,5 +28,16 @@ namespace DatabaseManagementSystem
             ReturnBook rb = new ReturnBook();
             rb.Show();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            AddBooks ab = new AddBooks();
+            ab.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DatabaseManagementSystem
 {
-    partial class ISSUE
+    partial class IssueBooks
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ISSUE));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssueBooks));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.tdpBookReturn = new System.Windows.Forms.DateTimePicker();

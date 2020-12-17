@@ -47,40 +47,48 @@ namespace DatabaseManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtMemberID.Text != "")
+            try
             {
-                String eid = txtMemberID.Text;
-
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                cmd.CommandText = "SELECT * FROM Student WHERE StudentID = '" + eid + "' ";
-                SqlDataAdapter DA = new SqlDataAdapter(cmd);
-                DataSet DS = new DataSet();
-                DA.Fill(DS);
-
-                if (DS.Tables[0].Rows.Count != 0)
+                if (txtMemberID.Text != "")
                 {
-                    txtMemberName.Text = DS.Tables[0].Rows[0][2].ToString();
-                    txtCopyNo.Text = DS.Tables[0].Rows[0][3].ToString();
-                    txtContactNo.Text = DS.Tables[0].Rows[0][5].ToString();
-                    txtEmail.Text = DS.Tables[0].Rows[0][6].ToString();
+                    String Mid = txtMemberID.Text;
+
+                    SqlConnection con = new SqlConnection();
+                    con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
+
+                    cmd.CommandText = "SELECT * FROM Borrower WHERE Member_ID = '" + Mid + "' ";
+                    SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                    DataSet DS = new DataSet();
+                    DA.Fill(DS);
+
+                    if (DS.Tables[0].Rows.Count != 0)
+                    {
+                        txtMemberName.Text = DS.Tables[0].Rows[0][1].ToString();                        
+                        txtContactNo.Text = DS.Tables[0].Rows[0][2].ToString();
+                        txtEmail.Text = DS.Tables[0].Rows[0][3].ToString();
+                        txtCopyNo.Text = DS.Tables[0].Rows[0][4].ToString();
+                    }
+                    else
+                    {
+                        txtMemberName.Clear();
+                        txtContactNo.Clear();
+                        txtEmail.Clear();
+                        txtCopyNo.Clear();
+                        MessageBox.Show("Invalid Member ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    txtMemberName.Clear();
-                    txtCopyNo.Clear();
-                    txtContactNo.Clear();
-                    txtEmail.Clear();
-                    MessageBox.Show("Invalid Student ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please input Member ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Please input Student ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex + "\n\n Please check your database details!" , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void txtStudentName_TextChanged(object sender, EventArgs e)

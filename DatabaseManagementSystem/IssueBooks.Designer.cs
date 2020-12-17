@@ -188,7 +188,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(179, 181);
+            this.txtEmail.Location = new System.Drawing.Point(179, 145);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(220, 22);
@@ -197,7 +197,7 @@
             // txtContactNo
             // 
             this.txtContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNo.Location = new System.Drawing.Point(179, 144);
+            this.txtContactNo.Location = new System.Drawing.Point(179, 108);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.ReadOnly = true;
             this.txtContactNo.Size = new System.Drawing.Size(220, 22);
@@ -206,9 +206,8 @@
             // txtCopyNo
             // 
             this.txtCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCopyNo.Location = new System.Drawing.Point(179, 107);
+            this.txtCopyNo.Location = new System.Drawing.Point(179, 181);
             this.txtCopyNo.Name = "txtCopyNo";
-            this.txtCopyNo.ReadOnly = true;
             this.txtCopyNo.Size = new System.Drawing.Size(220, 22);
             this.txtCopyNo.TabIndex = 30;
             // 
@@ -225,7 +224,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(31, 184);
+            this.lblEmail.Location = new System.Drawing.Point(31, 148);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(135, 16);
             this.lblEmail.TabIndex = 28;
@@ -235,7 +234,7 @@
             // 
             this.lblContactNo.AutoSize = true;
             this.lblContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactNo.Location = new System.Drawing.Point(31, 147);
+            this.lblContactNo.Location = new System.Drawing.Point(31, 111);
             this.lblContactNo.Name = "lblContactNo";
             this.lblContactNo.Size = new System.Drawing.Size(134, 16);
             this.lblContactNo.TabIndex = 27;
@@ -245,7 +244,7 @@
             // 
             this.lblCopyNo.AutoSize = true;
             this.lblCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyNo.Location = new System.Drawing.Point(31, 110);
+            this.lblCopyNo.Location = new System.Drawing.Point(31, 184);
             this.lblCopyNo.Name = "lblCopyNo";
             this.lblCopyNo.Size = new System.Drawing.Size(136, 16);
             this.lblCopyNo.TabIndex = 26;
@@ -398,14 +397,14 @@
             this.lblBookIssue.TabIndex = 0;
             this.lblBookIssue.Text = "ISSUE BOOK";
             // 
-            // ISSUE
+            // IssueBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 554);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ISSUE";
+            this.Name = "IssueBooks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.ISSUE_Load);

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DatabaseManagementSystem
 {
-    public partial class BACKGROUND : Form
+    public partial class Background : Form
     {
-        public BACKGROUND()
+        public Background()
         {
             InitializeComponent();
         }
 
         private void btnIssueBooks_Click(object sender, EventArgs e)
         {
-            ISSUE i = new ISSUE();
+            IssueBooks i = new IssueBooks();
             i.Show();
         }
 

@@ -26,17 +26,17 @@ namespace DatabaseManagementSystem
         private void ISSUE_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=library; Integrated security=True";
+            con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
 
-            cmd = new SqlCommand("SELECT bName FROM NewBook", con);
+            cmd = new SqlCommand("SELECT Book_Name FROM Book", con);
             SqlDataReader sdr = cmd.ExecuteReader();
 
-            while(sdr.Read())
+            while (sdr.Read())
             {
-                for(int i=0; i<sdr.FieldCount; i++)
+                for (int i = 0; i < sdr.FieldCount; i++)
                 {
                     cmbBookName.Items.Add(sdr.GetString(i));
                 }
@@ -47,37 +47,39 @@ namespace DatabaseManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(txtIsbnNo.Text != "")
+            if (txtMemberID.Text != "")
             {
-                String eid = txtIsbnNo.Text;
+                String eid = txtMemberID.Text;
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=library; Integrated security=True";
+                con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT * FROM NewStudent WHERE ISBN_No = '"+ eid +"' ";
+                cmd.CommandText = "SELECT * FROM Student WHERE StudentID = '" + eid + "' ";
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
                 DA.Fill(DS);
 
-                if(DS.Tables[0].Rows.Count != 0)
+                if (DS.Tables[0].Rows.Count != 0)
                 {
-                    txtStudentName.Text = DS.Tables[0].Rows[0][1].ToString();
-                    txtFaculty.Text = DS.Tables[0].Rows[0][2].ToString();
-                    txtStudentBatch.Text = DS.Tables[0].Rows[0][3].ToString();
-                    txtStudentContactNo.Text = DS.Tables[0].Rows[0][4].ToString();
-                    txtStudentEmail.Text = DS.Tables[0].Rows[0][5].ToString();
+                    txtMemberName.Text = DS.Tables[0].Rows[0][2].ToString();
+                    txtCopyNo.Text = DS.Tables[0].Rows[0][3].ToString();
+                    txtContactNo.Text = DS.Tables[0].Rows[0][5].ToString();
+                    txtEmail.Text = DS.Tables[0].Rows[0][6].ToString();
                 }
                 else
                 {
-                    txtStudentName.Clear();
-                    txtFaculty.Clear();
-                    txtStudentBatch.Clear();
-                    txtStudentContactNo.Clear();
-                    txtStudentEmail.Clear();
-                    MessageBox.Show("Invalid ISBN NO!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtMemberName.Clear();
+                    txtCopyNo.Clear();
+                    txtContactNo.Clear();
+                    txtEmail.Clear();
+                    MessageBox.Show("Invalid Student ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please input Student ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

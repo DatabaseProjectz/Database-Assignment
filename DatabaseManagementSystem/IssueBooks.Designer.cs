@@ -31,16 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ISSUE));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnIssue = new System.Windows.Forms.Button();
-            this.lblDetails = new System.Windows.Forms.Label();
-            this.pnlLeft = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.imgStudent = new System.Windows.Forms.PictureBox();
-            this.pnlTop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblBookIssue = new System.Windows.Forms.Label();
             this.tdpBookReturn = new System.Windows.Forms.DateTimePicker();
             this.lblReturnDate = new System.Windows.Forms.Label();
             this.txtISBN = new System.Windows.Forms.TextBox();
@@ -57,8 +47,18 @@
             this.lblContactNo = new System.Windows.Forms.Label();
             this.lblCopyNo = new System.Windows.Forms.Label();
             this.lblMemberName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnIssue = new System.Windows.Forms.Button();
+            this.lblDetails = new System.Windows.Forms.Label();
+            this.pnlLeft = new System.Windows.Forms.Panel();
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.lblMemberID = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.imgStudent = new System.Windows.Forms.PictureBox();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.lblBookIssue = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
@@ -105,126 +105,6 @@
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(430, 481);
             this.pnlRight.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(50, 451);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 16);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Maximum 3 books can be issued to one student.";
-            // 
-            // btnIssue
-            // 
-            this.btnIssue.BackColor = System.Drawing.Color.Brown;
-            this.btnIssue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIssue.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIssue.ForeColor = System.Drawing.Color.White;
-            this.btnIssue.Location = new System.Drawing.Point(163, 384);
-            this.btnIssue.Name = "btnIssue";
-            this.btnIssue.Size = new System.Drawing.Size(124, 40);
-            this.btnIssue.TabIndex = 17;
-            this.btnIssue.Text = "ISSUE";
-            this.btnIssue.UseVisualStyleBackColor = false;
-            // 
-            // lblDetails
-            // 
-            this.lblDetails.AutoSize = true;
-            this.lblDetails.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblDetails.Location = new System.Drawing.Point(158, 19);
-            this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(113, 26);
-            this.lblDetails.TabIndex = 2;
-            this.lblDetails.Text = "DETAILS";
-            // 
-            // pnlLeft
-            // 
-            this.pnlLeft.BackColor = System.Drawing.Color.RosyBrown;
-            this.pnlLeft.Controls.Add(this.txtMemberID);
-            this.pnlLeft.Controls.Add(this.lblMemberID);
-            this.pnlLeft.Controls.Add(this.btnSearch);
-            this.pnlLeft.Controls.Add(this.imgStudent);
-            this.pnlLeft.Location = new System.Drawing.Point(0, 73);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(401, 481);
-            this.pnlLeft.TabIndex = 1;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Brown;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(134, 312);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(124, 40);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // imgStudent
-            // 
-            this.imgStudent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgStudent.BackgroundImage")));
-            this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgStudent.Location = new System.Drawing.Point(134, 65);
-            this.imgStudent.Name = "imgStudent";
-            this.imgStudent.Size = new System.Drawing.Size(124, 114);
-            this.imgStudent.TabIndex = 0;
-            this.imgStudent.TabStop = false;
-            // 
-            // pnlTop
-            // 
-            this.pnlTop.BackColor = System.Drawing.Color.White;
-            this.pnlTop.Controls.Add(this.pictureBox1);
-            this.pnlTop.Controls.Add(this.button1);
-            this.pnlTop.Controls.Add(this.lblBookIssue);
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(831, 554);
-            this.pnlTop.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(244, -17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(803, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblBookIssue
-            // 
-            this.lblBookIssue.AutoSize = true;
-            this.lblBookIssue.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookIssue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblBookIssue.Location = new System.Drawing.Point(386, 20);
-            this.lblBookIssue.Name = "lblBookIssue";
-            this.lblBookIssue.Size = new System.Drawing.Size(180, 31);
-            this.lblBookIssue.TabIndex = 0;
-            this.lblBookIssue.Text = "ISSUE BOOK";
             // 
             // tdpBookReturn
             // 
@@ -381,6 +261,54 @@
             this.lblMemberName.TabIndex = 25;
             this.lblMemberName.Text = "Member Name           :";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(50, 451);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(337, 16);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Maximum 3 books can be issued to one student.";
+            // 
+            // btnIssue
+            // 
+            this.btnIssue.BackColor = System.Drawing.Color.Brown;
+            this.btnIssue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIssue.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssue.ForeColor = System.Drawing.Color.White;
+            this.btnIssue.Location = new System.Drawing.Point(163, 384);
+            this.btnIssue.Name = "btnIssue";
+            this.btnIssue.Size = new System.Drawing.Size(124, 40);
+            this.btnIssue.TabIndex = 17;
+            this.btnIssue.Text = "ISSUE";
+            this.btnIssue.UseVisualStyleBackColor = false;
+            // 
+            // lblDetails
+            // 
+            this.lblDetails.AutoSize = true;
+            this.lblDetails.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblDetails.Location = new System.Drawing.Point(158, 19);
+            this.lblDetails.Name = "lblDetails";
+            this.lblDetails.Size = new System.Drawing.Size(113, 26);
+            this.lblDetails.TabIndex = 2;
+            this.lblDetails.Text = "DETAILS";
+            // 
+            // pnlLeft
+            // 
+            this.pnlLeft.BackColor = System.Drawing.Color.RosyBrown;
+            this.pnlLeft.Controls.Add(this.txtMemberID);
+            this.pnlLeft.Controls.Add(this.lblMemberID);
+            this.pnlLeft.Controls.Add(this.btnSearch);
+            this.pnlLeft.Controls.Add(this.imgStudent);
+            this.pnlLeft.Location = new System.Drawing.Point(0, 73);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(401, 481);
+            this.pnlLeft.TabIndex = 1;
+            // 
             // txtMemberID
             // 
             this.txtMemberID.Location = new System.Drawing.Point(192, 239);
@@ -397,6 +325,78 @@
             this.lblMemberID.Size = new System.Drawing.Size(65, 13);
             this.lblMemberID.TabIndex = 4;
             this.lblMemberID.Text = "Member ID :";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Brown;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(134, 312);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(124, 40);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // imgStudent
+            // 
+            this.imgStudent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgStudent.BackgroundImage")));
+            this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgStudent.Location = new System.Drawing.Point(134, 65);
+            this.imgStudent.Name = "imgStudent";
+            this.imgStudent.Size = new System.Drawing.Size(124, 114);
+            this.imgStudent.TabIndex = 0;
+            this.imgStudent.TabStop = false;
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.BackColor = System.Drawing.Color.White;
+            this.pnlTop.Controls.Add(this.pictureBox1);
+            this.pnlTop.Controls.Add(this.btnCancel);
+            this.pnlTop.Controls.Add(this.lblBookIssue);
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(831, 554);
+            this.pnlTop.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(244, -17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(803, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(25, 23);
+            this.btnCancel.TabIndex = 19;
+            this.btnCancel.Text = "X";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblBookIssue
+            // 
+            this.lblBookIssue.AutoSize = true;
+            this.lblBookIssue.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookIssue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblBookIssue.Location = new System.Drawing.Point(386, 20);
+            this.lblBookIssue.Name = "lblBookIssue";
+            this.lblBookIssue.Size = new System.Drawing.Size(180, 31);
+            this.lblBookIssue.TabIndex = 0;
+            this.lblBookIssue.Text = "ISSUE BOOK";
             // 
             // ISSUE
             // 
@@ -433,7 +433,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox imgStudent;
         private System.Windows.Forms.Button btnIssue;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker tdpBookReturn;

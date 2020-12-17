@@ -68,14 +68,12 @@ namespace DatabaseManagementSystem
                         txtMemberName.Text = DS.Tables[0].Rows[0][1].ToString();                        
                         txtContactNo.Text = DS.Tables[0].Rows[0][2].ToString();
                         txtEmail.Text = DS.Tables[0].Rows[0][3].ToString();
-                        txtCopyNo.Text = DS.Tables[0].Rows[0][4].ToString();
                     }
                     else
                     {
                         txtMemberName.Clear();
                         txtContactNo.Clear();
                         txtEmail.Clear();
-                        txtCopyNo.Clear();
                         MessageBox.Show("Invalid Member ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }

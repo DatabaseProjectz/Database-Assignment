@@ -24,7 +24,7 @@ namespace DatabaseManagementSystem
         }
 
         private void ISSUE_Load(object sender, EventArgs e)
-        {
+        {/*
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
             SqlCommand cmd = new SqlCommand();
@@ -42,7 +42,7 @@ namespace DatabaseManagementSystem
                 }
             }
             sdr.Close();
-            con.Close();
+            con.Close();*/
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -96,13 +96,47 @@ namespace DatabaseManagementSystem
 
         private void btnIssue_Click(object sender, EventArgs e)
         {
-            if(txtCopyNo.Text == "" || txtISBN.Text == "")
+            if(txtCopyNo.Text == "")
             {
                 MessageBox.Show("Please input all details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
 
+            }
+        }
+
+        private void btnCheckCopyNo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCopyNo.Text != "")
+                {
+                    String Cno = txtCopyNo.Text;
+
+                    SqlConnection con = new SqlConnection();
+                    con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT * FROM Copy WHERE CopyNo = '" + Cno + "' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                    DA.Fill(dt);
+                    dgvBookDetails.DataSource = dt;
+                    con.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please input Copy No!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex + "\n\n Please check your database details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

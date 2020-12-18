@@ -33,12 +33,8 @@
             this.pnlRight = new System.Windows.Forms.Panel();
             this.tdpBookReturn = new System.Windows.Forms.DateTimePicker();
             this.lblReturnDate = new System.Windows.Forms.Label();
-            this.txtISBN = new System.Windows.Forms.TextBox();
-            this.lblISBN = new System.Windows.Forms.Label();
-            this.cmbBookName = new System.Windows.Forms.ComboBox();
             this.tdpBookIssue = new System.Windows.Forms.DateTimePicker();
             this.lblBookIssueDate = new System.Windows.Forms.Label();
-            this.lblBookName = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtContactNo = new System.Windows.Forms.TextBox();
             this.txtCopyNo = new System.Windows.Forms.TextBox();
@@ -59,12 +55,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblBookIssue = new System.Windows.Forms.Label();
+            this.btnCheckCopyNo = new System.Windows.Forms.Button();
+            this.dgvBookDetails = new System.Windows.Forms.DataGridView();
+            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookPublication = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).BeginInit();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,20 +79,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(831, 554);
+            this.panel1.Size = new System.Drawing.Size(920, 554);
             this.panel1.TabIndex = 0;
             // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnlRight.Controls.Add(this.dgvBookDetails);
+            this.pnlRight.Controls.Add(this.btnCheckCopyNo);
             this.pnlRight.Controls.Add(this.tdpBookReturn);
             this.pnlRight.Controls.Add(this.lblReturnDate);
-            this.pnlRight.Controls.Add(this.txtISBN);
-            this.pnlRight.Controls.Add(this.lblISBN);
-            this.pnlRight.Controls.Add(this.cmbBookName);
             this.pnlRight.Controls.Add(this.tdpBookIssue);
             this.pnlRight.Controls.Add(this.lblBookIssueDate);
-            this.pnlRight.Controls.Add(this.lblBookName);
             this.pnlRight.Controls.Add(this.txtEmail);
             this.pnlRight.Controls.Add(this.txtContactNo);
             this.pnlRight.Controls.Add(this.txtCopyNo);
@@ -103,13 +104,13 @@
             this.pnlRight.Controls.Add(this.lblDetails);
             this.pnlRight.Location = new System.Drawing.Point(401, 73);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(430, 481);
+            this.pnlRight.Size = new System.Drawing.Size(520, 481);
             this.pnlRight.TabIndex = 2;
             // 
             // tdpBookReturn
             // 
             this.tdpBookReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdpBookReturn.Location = new System.Drawing.Point(179, 332);
+            this.tdpBookReturn.Location = new System.Drawing.Point(179, 331);
             this.tdpBookReturn.Name = "tdpBookReturn";
             this.tdpBookReturn.Size = new System.Drawing.Size(220, 22);
             this.tdpBookReturn.TabIndex = 40;
@@ -118,49 +119,16 @@
             // 
             this.lblReturnDate.AutoSize = true;
             this.lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturnDate.Location = new System.Drawing.Point(31, 333);
+            this.lblReturnDate.Location = new System.Drawing.Point(31, 332);
             this.lblReturnDate.Name = "lblReturnDate";
             this.lblReturnDate.Size = new System.Drawing.Size(141, 16);
             this.lblReturnDate.TabIndex = 39;
             this.lblReturnDate.Text = "Book Return Date       : ";
             // 
-            // txtISBN
-            // 
-            this.txtISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtISBN.Location = new System.Drawing.Point(179, 218);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(220, 22);
-            this.txtISBN.TabIndex = 38;
-            // 
-            // lblISBN
-            // 
-            this.lblISBN.AutoSize = true;
-            this.lblISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblISBN.Location = new System.Drawing.Point(31, 221);
-            this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(138, 16);
-            this.lblISBN.TabIndex = 37;
-            this.lblISBN.Text = "ISBN                                :";
-            // 
-            // cmbBookName
-            // 
-            this.cmbBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBookName.FormattingEnabled = true;
-            this.cmbBookName.Items.AddRange(new object[] {
-            "Database Management Studies",
-            "Java",
-            "C#",
-            "C language",
-            "Introduction to Computer Science"});
-            this.cmbBookName.Location = new System.Drawing.Point(179, 255);
-            this.cmbBookName.Name = "cmbBookName";
-            this.cmbBookName.Size = new System.Drawing.Size(220, 24);
-            this.cmbBookName.TabIndex = 36;
-            // 
             // tdpBookIssue
             // 
             this.tdpBookIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdpBookIssue.Location = new System.Drawing.Point(179, 294);
+            this.tdpBookIssue.Location = new System.Drawing.Point(179, 293);
             this.tdpBookIssue.Name = "tdpBookIssue";
             this.tdpBookIssue.Size = new System.Drawing.Size(220, 22);
             this.tdpBookIssue.TabIndex = 35;
@@ -169,21 +137,11 @@
             // 
             this.lblBookIssueDate.AutoSize = true;
             this.lblBookIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookIssueDate.Location = new System.Drawing.Point(31, 295);
+            this.lblBookIssueDate.Location = new System.Drawing.Point(31, 294);
             this.lblBookIssueDate.Name = "lblBookIssueDate";
             this.lblBookIssueDate.Size = new System.Drawing.Size(140, 16);
             this.lblBookIssueDate.TabIndex = 34;
             this.lblBookIssueDate.Text = "Book Issue Date         : ";
-            // 
-            // lblBookName
-            // 
-            this.lblBookName.AutoSize = true;
-            this.lblBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookName.Location = new System.Drawing.Point(31, 258);
-            this.lblBookName.Name = "lblBookName";
-            this.lblBookName.Size = new System.Drawing.Size(137, 16);
-            this.lblBookName.TabIndex = 33;
-            this.lblBookName.Text = "Book Name                  :";
             // 
             // txtEmail
             // 
@@ -265,11 +223,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(50, 451);
+            this.label1.Location = new System.Drawing.Point(50, 450);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(337, 16);
             this.label1.TabIndex = 20;
             this.label1.Text = "Maximum 3 books can be issued to one student.";
+            this.label1.Visible = false;
             // 
             // btnIssue
             // 
@@ -278,7 +237,7 @@
             this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIssue.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssue.ForeColor = System.Drawing.Color.White;
-            this.btnIssue.Location = new System.Drawing.Point(163, 384);
+            this.btnIssue.Location = new System.Drawing.Point(163, 383);
             this.btnIssue.Name = "btnIssue";
             this.btnIssue.Size = new System.Drawing.Size(124, 40);
             this.btnIssue.TabIndex = 17;
@@ -360,13 +319,13 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(831, 554);
+            this.pnlTop.Size = new System.Drawing.Size(920, 554);
             this.pnlTop.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(244, -17);
+            this.pictureBox1.Location = new System.Drawing.Point(276, -19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(140, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -380,7 +339,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(803, 3);
+            this.btnCancel.Location = new System.Drawing.Point(892, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(25, 23);
             this.btnCancel.TabIndex = 19;
@@ -393,17 +352,75 @@
             this.lblBookIssue.AutoSize = true;
             this.lblBookIssue.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookIssue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblBookIssue.Location = new System.Drawing.Point(386, 20);
+            this.lblBookIssue.Location = new System.Drawing.Point(418, 20);
             this.lblBookIssue.Name = "lblBookIssue";
             this.lblBookIssue.Size = new System.Drawing.Size(180, 31);
             this.lblBookIssue.TabIndex = 0;
             this.lblBookIssue.Text = "ISSUE BOOK";
             // 
+            // btnCheckCopyNo
+            // 
+            this.btnCheckCopyNo.BackColor = System.Drawing.Color.Brown;
+            this.btnCheckCopyNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckCopyNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCheckCopyNo.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckCopyNo.ForeColor = System.Drawing.Color.White;
+            this.btnCheckCopyNo.Location = new System.Drawing.Point(421, 180);
+            this.btnCheckCopyNo.Name = "btnCheckCopyNo";
+            this.btnCheckCopyNo.Size = new System.Drawing.Size(57, 23);
+            this.btnCheckCopyNo.TabIndex = 41;
+            this.btnCheckCopyNo.Text = "Check";
+            this.btnCheckCopyNo.UseVisualStyleBackColor = false;
+            this.btnCheckCopyNo.Click += new System.EventHandler(this.btnCheckCopyNo_Click);
+            // 
+            // dgvBookDetails
+            // 
+            this.dgvBookDetails.AllowUserToAddRows = false;
+            this.dgvBookDetails.AllowUserToDeleteRows = false;
+            this.dgvBookDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvBookDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBookDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ISBN,
+            this.BookName,
+            this.BookAuthor,
+            this.BookPublication});
+            this.dgvBookDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvBookDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvBookDetails.Location = new System.Drawing.Point(34, 220);
+            this.dgvBookDetails.Name = "dgvBookDetails";
+            this.dgvBookDetails.ReadOnly = true;
+            this.dgvBookDetails.Size = new System.Drawing.Size(444, 50);
+            this.dgvBookDetails.TabIndex = 42;
+            // 
+            // ISBN
+            // 
+            this.ISBN.HeaderText = "ISBN";
+            this.ISBN.Name = "ISBN";
+            this.ISBN.ReadOnly = true;
+            // 
+            // BookName
+            // 
+            this.BookName.HeaderText = "BookName";
+            this.BookName.Name = "BookName";
+            this.BookName.ReadOnly = true;
+            // 
+            // BookAuthor
+            // 
+            this.BookAuthor.HeaderText = "BookAuthor";
+            this.BookAuthor.Name = "BookAuthor";
+            this.BookAuthor.ReadOnly = true;
+            // 
+            // BookPublication
+            // 
+            this.BookPublication.HeaderText = "BookPublication";
+            this.BookPublication.Name = "BookPublication";
+            this.BookPublication.ReadOnly = true;
+            // 
             // IssueBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 554);
+            this.ClientSize = new System.Drawing.Size(920, 554);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IssueBooks";
@@ -419,6 +436,7 @@
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,12 +457,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker tdpBookReturn;
         private System.Windows.Forms.Label lblReturnDate;
-        private System.Windows.Forms.TextBox txtISBN;
-        private System.Windows.Forms.Label lblISBN;
-        private System.Windows.Forms.ComboBox cmbBookName;
         private System.Windows.Forms.DateTimePicker tdpBookIssue;
         private System.Windows.Forms.Label lblBookIssueDate;
-        private System.Windows.Forms.Label lblBookName;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.TextBox txtCopyNo;
@@ -455,5 +469,11 @@
         private System.Windows.Forms.Label lblMemberName;
         private System.Windows.Forms.TextBox txtMemberID;
         private System.Windows.Forms.Label lblMemberID;
+        private System.Windows.Forms.Button btnCheckCopyNo;
+        private System.Windows.Forms.DataGridView dgvBookDetails;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookAuthor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookPublication;
     }
 }

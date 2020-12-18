@@ -127,11 +127,10 @@ namespace DatabaseManagementSystem
                     DA.Fill(dt);
                     dgvBookDetails.DataSource = dt;
                     con.Close();
-
                 }
                 else
                 {
-                    MessageBox.Show("Please input Copy No!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Input Copy No!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch(Exception ex)

@@ -57,10 +57,10 @@
             this.lblBookIssue = new System.Windows.Forms.Label();
             this.btnCheckCopyNo = new System.Windows.Forms.Button();
             this.dgvBookDetails = new System.Windows.Forms.DataGridView();
-            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPublication = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
@@ -378,6 +378,7 @@
             this.dgvBookDetails.AllowUserToAddRows = false;
             this.dgvBookDetails.AllowUserToDeleteRows = false;
             this.dgvBookDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvBookDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvBookDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ISBN,
@@ -392,17 +393,11 @@
             this.dgvBookDetails.Size = new System.Drawing.Size(444, 50);
             this.dgvBookDetails.TabIndex = 42;
             // 
-            // ISBN
+            // BookPublication
             // 
-            this.ISBN.HeaderText = "ISBN";
-            this.ISBN.Name = "ISBN";
-            this.ISBN.ReadOnly = true;
-            // 
-            // BookName
-            // 
-            this.BookName.HeaderText = "BookName";
-            this.BookName.Name = "BookName";
-            this.BookName.ReadOnly = true;
+            this.BookPublication.HeaderText = "BookPublication";
+            this.BookPublication.Name = "BookPublication";
+            this.BookPublication.ReadOnly = true;
             // 
             // BookAuthor
             // 
@@ -410,11 +405,17 @@
             this.BookAuthor.Name = "BookAuthor";
             this.BookAuthor.ReadOnly = true;
             // 
-            // BookPublication
+            // BookName
             // 
-            this.BookPublication.HeaderText = "BookPublication";
-            this.BookPublication.Name = "BookPublication";
-            this.BookPublication.ReadOnly = true;
+            this.BookName.HeaderText = "BookName";
+            this.BookName.Name = "BookName";
+            this.BookName.ReadOnly = true;
+            // 
+            // ISBN
+            // 
+            this.ISBN.HeaderText = "ISBN";
+            this.ISBN.Name = "ISBN";
+            this.ISBN.ReadOnly = true;
             // 
             // IssueBooks
             // 

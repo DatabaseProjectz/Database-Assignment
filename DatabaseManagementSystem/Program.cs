@@ -16,7 +16,7 @@ namespace DatabaseManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BACKGROUND());
+            Application.Run(new Background());
         }
     }
 }

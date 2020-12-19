@@ -1,6 +1,6 @@
 ﻿namespace DatabaseManagementSystem
 {
-    partial class BACKGROUND
+    partial class Background
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BACKGROUND));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Background));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
@@ -52,12 +52,10 @@
             this.panel1.Controls.Add(this.btnCompleteBookDetails);
             this.panel1.Controls.Add(this.btnIssueBooks);
             this.panel1.Controls.Add(this.btnReturnBooks);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1823, 970);
+            this.panel1.Size = new System.Drawing.Size(1367, 788);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
@@ -66,13 +64,13 @@
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1519, 806);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(1139, 655);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(284, 89);
+            this.btnExit.Size = new System.Drawing.Size(213, 72);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnBooks
             // 
@@ -80,13 +78,13 @@
             this.btnBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBooks.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.ForeColor = System.Drawing.Color.White;
-            this.btnBooks.Location = new System.Drawing.Point(16, 81);
-            this.btnBooks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBooks.Location = new System.Drawing.Point(12, 66);
             this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(284, 89);
+            this.btnBooks.Size = new System.Drawing.Size(213, 72);
             this.btnBooks.TabIndex = 0;
             this.btnBooks.Text = "BOOKS";
             this.btnBooks.UseVisualStyleBackColor = false;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnAdmin
             // 
@@ -94,10 +92,9 @@
             this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.Location = new System.Drawing.Point(1271, 684);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdmin.Location = new System.Drawing.Point(953, 556);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(284, 89);
+            this.btnAdmin.Size = new System.Drawing.Size(213, 72);
             this.btnAdmin.TabIndex = 5;
             this.btnAdmin.Text = "ADMIN";
             this.btnAdmin.UseVisualStyleBackColor = false;
@@ -108,10 +105,9 @@
             this.btnStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudent.ForeColor = System.Drawing.Color.White;
-            this.btnStudent.Location = new System.Drawing.Point(260, 199);
-            this.btnStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStudent.Location = new System.Drawing.Point(195, 162);
             this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Size = new System.Drawing.Size(284, 89);
+            this.btnStudent.Size = new System.Drawing.Size(213, 72);
             this.btnStudent.TabIndex = 1;
             this.btnStudent.Text = "STUDENT";
             this.btnStudent.UseVisualStyleBackColor = false;
@@ -122,10 +118,9 @@
             this.btnCompleteBookDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCompleteBookDetails.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompleteBookDetails.ForeColor = System.Drawing.Color.White;
-            this.btnCompleteBookDetails.Location = new System.Drawing.Point(1023, 562);
-            this.btnCompleteBookDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompleteBookDetails.Location = new System.Drawing.Point(767, 457);
             this.btnCompleteBookDetails.Name = "btnCompleteBookDetails";
-            this.btnCompleteBookDetails.Size = new System.Drawing.Size(284, 89);
+            this.btnCompleteBookDetails.Size = new System.Drawing.Size(213, 72);
             this.btnCompleteBookDetails.TabIndex = 4;
             this.btnCompleteBookDetails.Text = "COMPLETE BOOK DETAILS";
             this.btnCompleteBookDetails.UseVisualStyleBackColor = false;
@@ -136,10 +131,9 @@
             this.btnIssueBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIssueBooks.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssueBooks.ForeColor = System.Drawing.Color.White;
-            this.btnIssueBooks.Location = new System.Drawing.Point(517, 319);
-            this.btnIssueBooks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIssueBooks.Location = new System.Drawing.Point(388, 259);
             this.btnIssueBooks.Name = "btnIssueBooks";
-            this.btnIssueBooks.Size = new System.Drawing.Size(284, 89);
+            this.btnIssueBooks.Size = new System.Drawing.Size(213, 72);
             this.btnIssueBooks.TabIndex = 2;
             this.btnIssueBooks.Text = "ISSUE BOOKS";
             this.btnIssueBooks.UseVisualStyleBackColor = false;
@@ -151,24 +145,22 @@
             this.btnReturnBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReturnBooks.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnBooks.ForeColor = System.Drawing.Color.White;
-            this.btnReturnBooks.Location = new System.Drawing.Point(771, 438);
-            this.btnReturnBooks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturnBooks.Location = new System.Drawing.Point(578, 356);
             this.btnReturnBooks.Name = "btnReturnBooks";
-            this.btnReturnBooks.Size = new System.Drawing.Size(284, 89);
+            this.btnReturnBooks.Size = new System.Drawing.Size(213, 72);
             this.btnReturnBooks.TabIndex = 3;
             this.btnReturnBooks.Text = "RETURN BOOKS";
             this.btnReturnBooks.UseVisualStyleBackColor = false;
             this.btnReturnBooks.Click += new System.EventHandler(this.btnReturnBooks_Click);
             // 
-            // BACKGROUND
+            // Background
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1823, 970);
+            this.ClientSize = new System.Drawing.Size(1367, 788);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "BACKGROUND";
+            this.Name = "Background";
             this.Text = "Welcome";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -97,9 +97,7 @@ namespace DatabaseManagementSystem
         private void btnIssue_Click(object sender, EventArgs e)
         {
             int a = dgvIssuedBooks.RowCount;
-            label1.Text = (a).ToString();
-
-            //dgvIssuedBooks.RowCount.ToString()
+            label1.Text = a.ToString();
 
             try
             {
@@ -112,10 +110,10 @@ namespace DatabaseManagementSystem
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
                     con.Open();
-
+                    
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO IssueInfo(Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtMemberID.Text + "' , '" + txtMemberID.Text + "' , '" + 0.00 + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                    cmd.CommandText = "INSERT INTO IssueInfo(IssueNo, Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + 0.00 + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
@@ -140,7 +138,7 @@ namespace DatabaseManagementSystem
 
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT ISBN, Book_Name, Book_Author_Name, Book_Publication, CopyNo FROM Book, Copy WHERE ISBN = (SELECT ISBN FROM Copy WHERE CopyNo = '" + isbn + "') ";
+                    cmd.CommandText = "SELECT ISBN, Book_Name, Book_Author_Name, Book_Publication, Copy.CopyNo FROM Book, Copy WHERE Book.ISBN = Copy.Copy_ISBN AND ISBN = '" + isbn + "' ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter DA = new SqlDataAdapter(cmd);
@@ -178,15 +176,22 @@ namespace DatabaseManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(txtISBN.Text != "")
+            if(txtCopyNo.Text != "")
             {
                 dgvIssuedBooks.Show();
-                dgvIssuedBooks.Rows.Add(txtISBN.Text);
+                dgvIssuedBooks.Rows.Add(txtCopyNo.Text);
+
+                //dgvIssuedBooks.Rows.Add(dgvBookDetails.SelectedColumns.ToString());
             } 
             else
             {
                 MessageBox.Show("Please input Copy No before adding!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtISBN_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

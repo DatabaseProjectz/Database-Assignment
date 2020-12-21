@@ -58,8 +58,11 @@
             this.lblBookIssue = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvIssuedBooks = new System.Windows.Forms.DataGridView();
-            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCopyNo = new System.Windows.Forms.TextBox();
+            this.lblCopyNo = new System.Windows.Forms.Label();
+            this.CopyNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIssueNo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).BeginInit();
@@ -79,12 +82,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 524);
+            this.panel1.Size = new System.Drawing.Size(1070, 568);
             this.panel1.TabIndex = 0;
             // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnlRight.Controls.Add(this.txtIssueNo);
+            this.pnlRight.Controls.Add(this.txtCopyNo);
+            this.pnlRight.Controls.Add(this.lblCopyNo);
             this.pnlRight.Controls.Add(this.label1);
             this.pnlRight.Controls.Add(this.dgvIssuedBooks);
             this.pnlRight.Controls.Add(this.btnAdd);
@@ -106,7 +112,7 @@
             this.pnlRight.Controls.Add(this.lblDetails);
             this.pnlRight.Location = new System.Drawing.Point(401, 73);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(669, 451);
+            this.pnlRight.Size = new System.Drawing.Size(669, 493);
             this.pnlRight.TabIndex = 2;
             // 
             // dgvBookDetails
@@ -118,7 +124,7 @@
             this.dgvBookDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvBookDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvBookDetails.Location = new System.Drawing.Point(6, 217);
+            this.dgvBookDetails.Location = new System.Drawing.Point(6, 257);
             this.dgvBookDetails.Name = "dgvBookDetails";
             this.dgvBookDetails.Size = new System.Drawing.Size(494, 83);
             this.dgvBookDetails.TabIndex = 42;
@@ -142,7 +148,7 @@
             // 
             this.tdpBookReturn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tdpBookReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdpBookReturn.Location = new System.Drawing.Point(222, 344);
+            this.tdpBookReturn.Location = new System.Drawing.Point(222, 384);
             this.tdpBookReturn.Name = "tdpBookReturn";
             this.tdpBookReturn.Size = new System.Drawing.Size(220, 22);
             this.tdpBookReturn.TabIndex = 40;
@@ -151,7 +157,7 @@
             // 
             this.lblReturnDate.AutoSize = true;
             this.lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturnDate.Location = new System.Drawing.Point(74, 345);
+            this.lblReturnDate.Location = new System.Drawing.Point(74, 385);
             this.lblReturnDate.Name = "lblReturnDate";
             this.lblReturnDate.Size = new System.Drawing.Size(141, 16);
             this.lblReturnDate.TabIndex = 39;
@@ -161,7 +167,7 @@
             // 
             this.tdpBookIssue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tdpBookIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdpBookIssue.Location = new System.Drawing.Point(222, 306);
+            this.tdpBookIssue.Location = new System.Drawing.Point(222, 346);
             this.tdpBookIssue.Name = "tdpBookIssue";
             this.tdpBookIssue.Size = new System.Drawing.Size(220, 22);
             this.tdpBookIssue.TabIndex = 35;
@@ -170,7 +176,7 @@
             // 
             this.lblBookIssueDate.AutoSize = true;
             this.lblBookIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookIssueDate.Location = new System.Drawing.Point(74, 307);
+            this.lblBookIssueDate.Location = new System.Drawing.Point(74, 347);
             this.lblBookIssueDate.Name = "lblBookIssueDate";
             this.lblBookIssueDate.Size = new System.Drawing.Size(140, 16);
             this.lblBookIssueDate.TabIndex = 34;
@@ -204,6 +210,7 @@
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(220, 22);
             this.txtISBN.TabIndex = 30;
+            this.txtISBN.TextChanged += new System.EventHandler(this.txtISBN_TextChanged);
             // 
             // txtMemberName
             // 
@@ -262,7 +269,7 @@
             this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIssue.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssue.ForeColor = System.Drawing.Color.White;
-            this.btnIssue.Location = new System.Drawing.Point(278, 393);
+            this.btnIssue.Location = new System.Drawing.Point(278, 433);
             this.btnIssue.Name = "btnIssue";
             this.btnIssue.Size = new System.Drawing.Size(124, 40);
             this.btnIssue.TabIndex = 17;
@@ -290,7 +297,7 @@
             this.pnlLeft.Controls.Add(this.imgStudent);
             this.pnlLeft.Location = new System.Drawing.Point(0, 73);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(401, 451);
+            this.pnlLeft.Size = new System.Drawing.Size(401, 493);
             this.pnlLeft.TabIndex = 1;
             // 
             // txtMemberID
@@ -346,7 +353,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1070, 524);
+            this.pnlTop.Size = new System.Drawing.Size(1070, 568);
             this.pnlTop.TabIndex = 0;
             // 
             // pictureBox1
@@ -366,7 +373,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(1036, 3);
+            this.btnCancel.Location = new System.Drawing.Point(1042, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(25, 23);
             this.btnCancel.TabIndex = 19;
@@ -392,7 +399,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(565, 178);
+            this.btnAdd.Location = new System.Drawing.Point(468, 216);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(57, 23);
             this.btnAdd.TabIndex = 44;
@@ -407,21 +414,15 @@
             this.dgvIssuedBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvIssuedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIssuedBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ISBN});
+            this.CopyNo});
             this.dgvIssuedBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvIssuedBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvIssuedBooks.Location = new System.Drawing.Point(506, 217);
+            this.dgvIssuedBooks.Location = new System.Drawing.Point(516, 257);
             this.dgvIssuedBooks.Name = "dgvIssuedBooks";
             this.dgvIssuedBooks.ReadOnly = true;
-            this.dgvIssuedBooks.Size = new System.Drawing.Size(144, 95);
+            this.dgvIssuedBooks.Size = new System.Drawing.Size(141, 83);
             this.dgvIssuedBooks.TabIndex = 45;
             this.dgvIssuedBooks.Visible = false;
-            // 
-            // ISBN
-            // 
-            this.ISBN.HeaderText = "       ISBN";
-            this.ISBN.Name = "ISBN";
-            this.ISBN.ReadOnly = true;
             // 
             // label1
             // 
@@ -431,11 +432,43 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 46;
             // 
+            // txtCopyNo
+            // 
+            this.txtCopyNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCopyNo.Location = new System.Drawing.Point(222, 216);
+            this.txtCopyNo.Name = "txtCopyNo";
+            this.txtCopyNo.Size = new System.Drawing.Size(220, 22);
+            this.txtCopyNo.TabIndex = 48;
+            // 
+            // lblCopyNo
+            // 
+            this.lblCopyNo.AutoSize = true;
+            this.lblCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCopyNo.Location = new System.Drawing.Point(74, 219);
+            this.lblCopyNo.Name = "lblCopyNo";
+            this.lblCopyNo.Size = new System.Drawing.Size(136, 16);
+            this.lblCopyNo.TabIndex = 47;
+            this.lblCopyNo.Text = "Copy No                        :";
+            // 
+            // CopyNo
+            // 
+            this.CopyNo.HeaderText = "     Copy No";
+            this.CopyNo.Name = "CopyNo";
+            this.CopyNo.ReadOnly = true;
+            // 
+            // txtIssueNo
+            // 
+            this.txtIssueNo.Location = new System.Drawing.Point(536, 65);
+            this.txtIssueNo.Name = "txtIssueNo";
+            this.txtIssueNo.Size = new System.Drawing.Size(100, 20);
+            this.txtIssueNo.TabIndex = 49;
+            // 
             // IssueBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 524);
+            this.ClientSize = new System.Drawing.Size(1070, 568);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IssueBooks";
@@ -488,7 +521,10 @@
         private System.Windows.Forms.DataGridView dgvBookDetails;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvIssuedBooks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCopyNo;
+        private System.Windows.Forms.Label lblCopyNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CopyNo;
+        private System.Windows.Forms.TextBox txtIssueNo;
     }
 }

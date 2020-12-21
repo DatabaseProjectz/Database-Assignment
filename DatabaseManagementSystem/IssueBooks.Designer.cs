@@ -59,6 +59,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvIssuedBooks = new System.Windows.Forms.DataGridView();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).BeginInit();
@@ -84,6 +85,7 @@
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnlRight.Controls.Add(this.label1);
             this.pnlRight.Controls.Add(this.dgvIssuedBooks);
             this.pnlRight.Controls.Add(this.btnAdd);
             this.pnlRight.Controls.Add(this.dgvBookDetails);
@@ -116,9 +118,9 @@
             this.dgvBookDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvBookDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvBookDetails.Location = new System.Drawing.Point(32, 217);
+            this.dgvBookDetails.Location = new System.Drawing.Point(6, 217);
             this.dgvBookDetails.Name = "dgvBookDetails";
-            this.dgvBookDetails.Size = new System.Drawing.Size(453, 49);
+            this.dgvBookDetails.Size = new System.Drawing.Size(494, 83);
             this.dgvBookDetails.TabIndex = 42;
             // 
             // btnCheckCopyNo
@@ -140,7 +142,7 @@
             // 
             this.tdpBookReturn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tdpBookReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdpBookReturn.Location = new System.Drawing.Point(222, 321);
+            this.tdpBookReturn.Location = new System.Drawing.Point(222, 344);
             this.tdpBookReturn.Name = "tdpBookReturn";
             this.tdpBookReturn.Size = new System.Drawing.Size(220, 22);
             this.tdpBookReturn.TabIndex = 40;
@@ -149,7 +151,7 @@
             // 
             this.lblReturnDate.AutoSize = true;
             this.lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturnDate.Location = new System.Drawing.Point(74, 322);
+            this.lblReturnDate.Location = new System.Drawing.Point(74, 345);
             this.lblReturnDate.Name = "lblReturnDate";
             this.lblReturnDate.Size = new System.Drawing.Size(141, 16);
             this.lblReturnDate.TabIndex = 39;
@@ -159,7 +161,7 @@
             // 
             this.tdpBookIssue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tdpBookIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdpBookIssue.Location = new System.Drawing.Point(222, 283);
+            this.tdpBookIssue.Location = new System.Drawing.Point(222, 306);
             this.tdpBookIssue.Name = "tdpBookIssue";
             this.tdpBookIssue.Size = new System.Drawing.Size(220, 22);
             this.tdpBookIssue.TabIndex = 35;
@@ -168,7 +170,7 @@
             // 
             this.lblBookIssueDate.AutoSize = true;
             this.lblBookIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookIssueDate.Location = new System.Drawing.Point(74, 284);
+            this.lblBookIssueDate.Location = new System.Drawing.Point(74, 307);
             this.lblBookIssueDate.Name = "lblBookIssueDate";
             this.lblBookIssueDate.Size = new System.Drawing.Size(140, 16);
             this.lblBookIssueDate.TabIndex = 34;
@@ -260,7 +262,7 @@
             this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIssue.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssue.ForeColor = System.Drawing.Color.White;
-            this.btnIssue.Location = new System.Drawing.Point(278, 382);
+            this.btnIssue.Location = new System.Drawing.Point(278, 393);
             this.btnIssue.Name = "btnIssue";
             this.btnIssue.Size = new System.Drawing.Size(124, 40);
             this.btnIssue.TabIndex = 17;
@@ -421,6 +423,14 @@
             this.ISBN.Name = "ISBN";
             this.ISBN.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(565, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 46;
+            // 
             // IssueBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,5 +489,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvIssuedBooks;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
+        private System.Windows.Forms.Label label1;
     }
 }

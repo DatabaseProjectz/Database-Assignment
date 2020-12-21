@@ -58,7 +58,7 @@ namespace DatabaseManagementSystem
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
 
-                    cmd.CommandText = "SELECT * FROM Borrower WHERE Member_ID = '" + Mid + "' ";
+                    cmd.CommandText = "SELECT * FROM Borrower WHERE M_ID = '" + Mid + "' ";
                     SqlDataAdapter DA = new SqlDataAdapter(cmd);
                     DataSet DS = new DataSet();
                     DA.Fill(DS);
@@ -96,6 +96,11 @@ namespace DatabaseManagementSystem
 
         private void btnIssue_Click(object sender, EventArgs e)
         {
+            int a = dgvIssuedBooks.RowCount;
+            label1.Text = (a).ToString();
+
+            //dgvIssuedBooks.RowCount.ToString()
+
             try
             {
                 if (txtISBN.Text == "")
@@ -110,14 +115,14 @@ namespace DatabaseManagementSystem
 
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO IssueInfo(CopyNo, MemberID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtMemberID.Text + "' , '" + 0.0 + "' , '" + dgvIssuedBooks.RowCount + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                    cmd.CommandText = "INSERT INTO IssueInfo(Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtMemberID.Text + "' , '" + txtMemberID.Text + "' , '" + 0.00 + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);            
             }
         }
 
@@ -135,7 +140,7 @@ namespace DatabaseManagementSystem
 
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT ISBN, Book_Name, Book_Author_Name, Book_Publication FROM Book WHERE ISBN = (SELECT ISBN FROM Book WHERE ISBN = '" + isbn + "') ";
+                    cmd.CommandText = "SELECT ISBN, Book_Name, Book_Author_Name, Book_Publication, CopyNo FROM Book, Copy WHERE ISBN = (SELECT ISBN FROM Copy WHERE CopyNo = '" + isbn + "') ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter DA = new SqlDataAdapter(cmd);

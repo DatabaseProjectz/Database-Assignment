@@ -84,7 +84,7 @@ namespace DatabaseManagementSystem
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex + "\n\n Please check your database details!" , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -96,13 +96,28 @@ namespace DatabaseManagementSystem
 
         private void btnIssue_Click(object sender, EventArgs e)
         {
-            if(txtCopyNo.Text == "")
+            try
             {
-                MessageBox.Show("Please input all details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
+                if (txtISBN.Text == "")
+                {
+                    MessageBox.Show("Please input all details!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection();
+                    con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
+                    con.Open();
 
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO IssueInfo(CopyNo, MemberID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtMemberID.Text + "' , '" + 0.0 + "' , '" + dgvIssuedBooks.RowCount + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -110,32 +125,62 @@ namespace DatabaseManagementSystem
         {
             try
             {
-                if (txtCopyNo.Text != "")
+                if (txtISBN.Text != "")
                 {
-                    String Cno = txtCopyNo.Text;
+                    String isbn = txtISBN.Text;
 
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand();
+                    SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT * FROM Copy WHERE CopyNo = '" + Cno + "' ";
+                    cmd.CommandText = "SELECT ISBN, Book_Name, Book_Author_Name, Book_Publication FROM Book WHERE ISBN = (SELECT ISBN FROM Book WHERE ISBN = '" + isbn + "') ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter DA = new SqlDataAdapter(cmd);
                     DA.Fill(dt);
                     dgvBookDetails.DataSource = dt;
                     con.Close();
+                    
+                    dgvBookDetails.Show();
+
+                    tdpBookReturn.Value = tdpBookIssue.Value.AddDays(14);
                 }
                 else
                 {
+                    dgvBookDetails.Rows.Clear();
                     MessageBox.Show("Please Input Copy No!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex + "\n\n Please check your database details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtMemberID_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMemberID.Text == "")
+            {
+                txtMemberName.Text = "";
+                txtContactNo.Text = "";
+                txtEmail.Text = "";
+                txtISBN.Text = "";
+                dgvBookDetails.Hide();
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(txtISBN.Text != "")
+            {
+                dgvIssuedBooks.Show();
+                dgvIssuedBooks.Rows.Add(txtISBN.Text);
+            } 
+            else
+            {
+                MessageBox.Show("Please input Copy No before adding!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

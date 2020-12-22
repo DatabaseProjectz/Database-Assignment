@@ -31,6 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssueBooks));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRight = new System.Windows.Forms.Panel();
+            this.txtIssueNo = new System.Windows.Forms.TextBox();
+            this.txtCopyNo = new System.Windows.Forms.TextBox();
+            this.lblCopyNo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvIssuedBooks = new System.Windows.Forms.DataGridView();
+            this.CopyNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.dgvBookDetails = new System.Windows.Forms.DataGridView();
             this.btnCheckCopyNo = new System.Windows.Forms.Button();
             this.tdpBookReturn = new System.Windows.Forms.DateTimePicker();
@@ -56,21 +63,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblBookIssue = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvIssuedBooks = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCopyNo = new System.Windows.Forms.TextBox();
-            this.lblCopyNo = new System.Windows.Forms.Label();
-            this.CopyNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtIssueNo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).BeginInit();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).BeginInit();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,6 +115,78 @@
             this.pnlRight.Size = new System.Drawing.Size(669, 493);
             this.pnlRight.TabIndex = 2;
             // 
+            // txtIssueNo
+            // 
+            this.txtIssueNo.Location = new System.Drawing.Point(536, 65);
+            this.txtIssueNo.Name = "txtIssueNo";
+            this.txtIssueNo.Size = new System.Drawing.Size(100, 20);
+            this.txtIssueNo.TabIndex = 49;
+            // 
+            // txtCopyNo
+            // 
+            this.txtCopyNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCopyNo.Location = new System.Drawing.Point(222, 309);
+            this.txtCopyNo.Name = "txtCopyNo";
+            this.txtCopyNo.Size = new System.Drawing.Size(220, 22);
+            this.txtCopyNo.TabIndex = 48;
+            // 
+            // lblCopyNo
+            // 
+            this.lblCopyNo.AutoSize = true;
+            this.lblCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCopyNo.Location = new System.Drawing.Point(74, 312);
+            this.lblCopyNo.Name = "lblCopyNo";
+            this.lblCopyNo.Size = new System.Drawing.Size(136, 16);
+            this.lblCopyNo.TabIndex = 47;
+            this.lblCopyNo.Text = "Copy No                        :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(565, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 46;
+            // 
+            // dgvIssuedBooks
+            // 
+            this.dgvIssuedBooks.AllowUserToAddRows = false;
+            this.dgvIssuedBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvIssuedBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvIssuedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIssuedBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CopyNo});
+            this.dgvIssuedBooks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvIssuedBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvIssuedBooks.Location = new System.Drawing.Point(516, 216);
+            this.dgvIssuedBooks.Name = "dgvIssuedBooks";
+            this.dgvIssuedBooks.ReadOnly = true;
+            this.dgvIssuedBooks.Size = new System.Drawing.Size(141, 83);
+            this.dgvIssuedBooks.TabIndex = 45;
+            this.dgvIssuedBooks.Visible = false;
+            // 
+            // CopyNo
+            // 
+            this.CopyNo.HeaderText = "     Copy No";
+            this.CopyNo.Name = "CopyNo";
+            this.CopyNo.ReadOnly = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Brown;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(468, 309);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(57, 23);
+            this.btnAdd.TabIndex = 44;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // dgvBookDetails
             // 
             this.dgvBookDetails.AllowUserToAddRows = false;
@@ -124,9 +196,9 @@
             this.dgvBookDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvBookDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvBookDetails.Location = new System.Drawing.Point(6, 257);
+            this.dgvBookDetails.Location = new System.Drawing.Point(19, 216);
             this.dgvBookDetails.Name = "dgvBookDetails";
-            this.dgvBookDetails.Size = new System.Drawing.Size(494, 83);
+            this.dgvBookDetails.Size = new System.Drawing.Size(481, 83);
             this.dgvBookDetails.TabIndex = 42;
             // 
             // btnCheckCopyNo
@@ -392,78 +464,6 @@
             this.lblBookIssue.TabIndex = 0;
             this.lblBookIssue.Text = "ISSUE BOOK";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Brown;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(468, 216);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(57, 23);
-            this.btnAdd.TabIndex = 44;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // dgvIssuedBooks
-            // 
-            this.dgvIssuedBooks.AllowUserToAddRows = false;
-            this.dgvIssuedBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvIssuedBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvIssuedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIssuedBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CopyNo});
-            this.dgvIssuedBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvIssuedBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvIssuedBooks.Location = new System.Drawing.Point(516, 257);
-            this.dgvIssuedBooks.Name = "dgvIssuedBooks";
-            this.dgvIssuedBooks.ReadOnly = true;
-            this.dgvIssuedBooks.Size = new System.Drawing.Size(141, 83);
-            this.dgvIssuedBooks.TabIndex = 45;
-            this.dgvIssuedBooks.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(565, 369);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 46;
-            // 
-            // txtCopyNo
-            // 
-            this.txtCopyNo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCopyNo.Location = new System.Drawing.Point(222, 216);
-            this.txtCopyNo.Name = "txtCopyNo";
-            this.txtCopyNo.Size = new System.Drawing.Size(220, 22);
-            this.txtCopyNo.TabIndex = 48;
-            // 
-            // lblCopyNo
-            // 
-            this.lblCopyNo.AutoSize = true;
-            this.lblCopyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyNo.Location = new System.Drawing.Point(74, 219);
-            this.lblCopyNo.Name = "lblCopyNo";
-            this.lblCopyNo.Size = new System.Drawing.Size(136, 16);
-            this.lblCopyNo.TabIndex = 47;
-            this.lblCopyNo.Text = "Copy No                        :";
-            // 
-            // CopyNo
-            // 
-            this.CopyNo.HeaderText = "     Copy No";
-            this.CopyNo.Name = "CopyNo";
-            this.CopyNo.ReadOnly = true;
-            // 
-            // txtIssueNo
-            // 
-            this.txtIssueNo.Location = new System.Drawing.Point(536, 65);
-            this.txtIssueNo.Name = "txtIssueNo";
-            this.txtIssueNo.Size = new System.Drawing.Size(100, 20);
-            this.txtIssueNo.TabIndex = 49;
-            // 
             // IssueBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +478,7 @@
             this.panel1.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).EndInit();
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
@@ -485,7 +486,6 @@
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBooks)).EndInit();
             this.ResumeLayout(false);
 
         }

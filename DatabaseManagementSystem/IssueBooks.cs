@@ -13,6 +13,8 @@ namespace DatabaseManagementSystem
 {
     public partial class IssueBooks : Form
     {
+        int count = 0;
+
         public IssueBooks()
         {
             InitializeComponent();
@@ -65,9 +67,9 @@ namespace DatabaseManagementSystem
 
                     if (DS.Tables[0].Rows.Count != 0)
                     {
-                        txtMemberName.Text = DS.Tables[0].Rows[0][1].ToString();                        
-                        txtContactNo.Text = DS.Tables[0].Rows[0][2].ToString();
+                        txtMemberName.Text = DS.Tables[0].Rows[0][1].ToString();
                         txtEmail.Text = DS.Tables[0].Rows[0][3].ToString();
+                        txtContactNo.Text = DS.Tables[0].Rows[0][4].ToString();
                     }
                     else
                     {
@@ -96,14 +98,18 @@ namespace DatabaseManagementSystem
 
         private void btnIssue_Click(object sender, EventArgs e)
         {
-            int a = dgvIssuedBooks.RowCount;
-            label1.Text = a.ToString();
+            
+            int b = dgvIssuedBooks.RowCount;
+            label1.Text = b.ToString();
+
+            //count++;
+            //txtIssueNo.Text = count.ToString();
 
             try
             {
                 if (txtISBN.Text == "")
                 {
-                    MessageBox.Show("Please input all details!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please input all details!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -113,9 +119,11 @@ namespace DatabaseManagementSystem
                     
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO IssueInfo(IssueNo, Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + 0.00 + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                    cmd.CommandText = "INSERT INTO IssueInfo(IssueNo, Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtIssueNo.Text + "' , '" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + 0.00 + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
+
+                    MessageBox.Show("Congradulations!" , "Book Issued Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
             catch (Exception ex)
@@ -153,7 +161,7 @@ namespace DatabaseManagementSystem
                 else
                 {
                     dgvBookDetails.Rows.Clear();
-                    MessageBox.Show("Please Input Copy No!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Input Copy No!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch(Exception ex)
@@ -170,7 +178,9 @@ namespace DatabaseManagementSystem
                 txtContactNo.Text = "";
                 txtEmail.Text = "";
                 txtISBN.Text = "";
+                txtCopyNo.Text = "";
                 dgvBookDetails.Hide();
+                dgvIssuedBooks.Rows.Clear();
             }
         }
 
@@ -185,7 +195,7 @@ namespace DatabaseManagementSystem
             } 
             else
             {
-                MessageBox.Show("Please input Copy No before adding!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please input Copy No before adding!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

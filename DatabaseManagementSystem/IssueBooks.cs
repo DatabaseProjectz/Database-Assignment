@@ -26,25 +26,8 @@ namespace DatabaseManagementSystem
         }
 
         private void ISSUE_Load(object sender, EventArgs e)
-        {/*
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            con.Open();
+        {
 
-            cmd = new SqlCommand("SELECT Book_Name FROM Book", con);
-            SqlDataReader sdr = cmd.ExecuteReader();
-
-            while (sdr.Read())
-            {
-                for (int i = 0; i < sdr.FieldCount; i++)
-                {
-                    cmbBookName.Items.Add(sdr.GetString(i));
-                }
-            }
-            sdr.Close();
-            con.Close();*/
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -97,34 +80,34 @@ namespace DatabaseManagementSystem
         }
 
         private void btnIssue_Click(object sender, EventArgs e)
-        {
-            
+        {            
             int b = dgvIssuedBooks.RowCount;
             label1.Text = b.ToString();
 
-            //count++;
-            //txtIssueNo.Text = count.ToString();
+            count++;
+            txtIssueNo.Text = count.ToString();
 
             try
             {
                 if (txtISBN.Text == "")
-                {
-                    MessageBox.Show("Please input all details!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                    {
+                        MessageBox.Show("Please input all details!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 else
                 {
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
                     con.Open();
-                    
+
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO IssueInfo(IssueNo, Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtIssueNo.Text + "' , '" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + 0.00 + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                    cmd.CommandText = "INSERT INTO IssueInfo(IssueNo, Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtIssueNo.Text + "' , '" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + "" + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("Congradulations!" , "Book Issued Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MessageBox.Show("Congradulations!", "Book Issued Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
+
             }
             catch (Exception ex)
             {

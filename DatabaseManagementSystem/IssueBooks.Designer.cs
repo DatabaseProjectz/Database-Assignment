@@ -34,7 +34,7 @@
             this.txtCopyNo = new System.Windows.Forms.TextBox();
             this.lblCopyNo = new System.Windows.Forms.Label();
             this.dgvBookDetails = new System.Windows.Forms.DataGridView();
-            this.btnCheckCopyNo = new System.Windows.Forms.Button();
+            this.btnCheckISBN = new System.Windows.Forms.Button();
             this.tdpBookReturn = new System.Windows.Forms.DateTimePicker();
             this.lblReturnDate = new System.Windows.Forms.Label();
             this.tdpBookIssue = new System.Windows.Forms.DateTimePicker();
@@ -85,7 +85,7 @@
             this.pnlRight.Controls.Add(this.txtCopyNo);
             this.pnlRight.Controls.Add(this.lblCopyNo);
             this.pnlRight.Controls.Add(this.dgvBookDetails);
-            this.pnlRight.Controls.Add(this.btnCheckCopyNo);
+            this.pnlRight.Controls.Add(this.btnCheckISBN);
             this.pnlRight.Controls.Add(this.tdpBookReturn);
             this.pnlRight.Controls.Add(this.lblReturnDate);
             this.pnlRight.Controls.Add(this.tdpBookIssue);
@@ -138,20 +138,20 @@
             this.dgvBookDetails.Size = new System.Drawing.Size(506, 83);
             this.dgvBookDetails.TabIndex = 42;
             // 
-            // btnCheckCopyNo
+            // btnCheckISBN
             // 
-            this.btnCheckCopyNo.BackColor = System.Drawing.Color.Brown;
-            this.btnCheckCopyNo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheckCopyNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCheckCopyNo.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckCopyNo.ForeColor = System.Drawing.Color.White;
-            this.btnCheckCopyNo.Location = new System.Drawing.Point(468, 178);
-            this.btnCheckCopyNo.Name = "btnCheckCopyNo";
-            this.btnCheckCopyNo.Size = new System.Drawing.Size(57, 23);
-            this.btnCheckCopyNo.TabIndex = 41;
-            this.btnCheckCopyNo.Text = "Check";
-            this.btnCheckCopyNo.UseVisualStyleBackColor = false;
-            this.btnCheckCopyNo.Click += new System.EventHandler(this.btnCheckCopyNo_Click);
+            this.btnCheckISBN.BackColor = System.Drawing.Color.Brown;
+            this.btnCheckISBN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckISBN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCheckISBN.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckISBN.ForeColor = System.Drawing.Color.White;
+            this.btnCheckISBN.Location = new System.Drawing.Point(468, 178);
+            this.btnCheckISBN.Name = "btnCheckISBN";
+            this.btnCheckISBN.Size = new System.Drawing.Size(57, 23);
+            this.btnCheckISBN.TabIndex = 41;
+            this.btnCheckISBN.Text = "Check";
+            this.btnCheckISBN.UseVisualStyleBackColor = false;
+            this.btnCheckISBN.Click += new System.EventHandler(this.btnCheckISBN_Click);
             // 
             // tdpBookReturn
             // 
@@ -453,7 +453,7 @@
         private System.Windows.Forms.Label lblMemberName;
         private System.Windows.Forms.TextBox txtMemberID;
         private System.Windows.Forms.Label lblMemberID;
-        private System.Windows.Forms.Button btnCheckCopyNo;
+        private System.Windows.Forms.Button btnCheckISBN;
         private System.Windows.Forms.DataGridView dgvBookDetails;
         private System.Windows.Forms.TextBox txtCopyNo;
         private System.Windows.Forms.Label lblCopyNo;

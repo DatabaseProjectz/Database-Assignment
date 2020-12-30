@@ -18,11 +18,6 @@ namespace DatabaseManagementSystem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void ISSUE_Load(object sender, EventArgs e)
         {
 
@@ -161,6 +156,11 @@ namespace DatabaseManagementSystem
         private void txtISBN_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

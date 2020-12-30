@@ -388,7 +388,7 @@
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "X";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblBookIssue
             // 

@@ -13,8 +13,6 @@ namespace DatabaseManagementSystem
 {
     public partial class IssueBooks : Form
     {
-        int count = 0;
-
         public IssueBooks()
         {
             InitializeComponent();
@@ -64,12 +62,12 @@ namespace DatabaseManagementSystem
                 }
                 else
                 {
-                    MessageBox.Show("Please input Member ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please input Member ID!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error detected :" + ex, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -80,19 +78,13 @@ namespace DatabaseManagementSystem
         }
 
         private void btnIssue_Click(object sender, EventArgs e)
-        {            
-            int b = dgvIssuedBooks.RowCount;
-            label1.Text = b.ToString();
-
-            count++;
-            txtIssueNo.Text = count.ToString();
-
+        {
             try
             {
                 if (txtISBN.Text == "")
-                    {
-                        MessageBox.Show("Please input all details!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                {
+                    MessageBox.Show("Please input all details!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 else
                 {
                     SqlConnection con = new SqlConnection();
@@ -101,17 +93,17 @@ namespace DatabaseManagementSystem
 
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO IssueInfo(IssueNo, Book_ISBN, CopyNo, Member_ID, Fine, Quantity, IssueDate, ReturnDate) VALUES ('" + txtIssueNo.Text + "' , '" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + "" + "' , '" + dgvIssuedBooks.RowCount.ToString() + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                    cmd.CommandText = "INSERT INTO IssueInfo(B_ISBN, CopyNo, Member_ID, Fine, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + "" + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("Congradulations!", "Book Issued Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MessageBox.Show("Book Issued Successfully!", "Congradulations!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
                 }
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);            
+                MessageBox.Show("Error detected :" + ex, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -129,7 +121,7 @@ namespace DatabaseManagementSystem
 
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT ISBN, Book_Name, Book_Author_Name, Book_Publication, Copy.CopyNo FROM Book, Copy WHERE Book.ISBN = Copy.Copy_ISBN AND ISBN = '" + isbn + "' ";
+                    cmd.CommandText = "SELECT ISBN, B_Author, B_Name, B_Publisher, Copy.CopyNo FROM Book, Copy WHERE Book.ISBN = Copy.Copy_ISBN AND ISBN = '" + isbn + "' ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter DA = new SqlDataAdapter(cmd);
@@ -149,7 +141,7 @@ namespace DatabaseManagementSystem
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error detected :" + ex, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error detected :" + ex, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -163,22 +155,6 @@ namespace DatabaseManagementSystem
                 txtISBN.Text = "";
                 txtCopyNo.Text = "";
                 dgvBookDetails.Hide();
-                dgvIssuedBooks.Rows.Clear();
-            }
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if(txtCopyNo.Text != "")
-            {
-                dgvIssuedBooks.Show();
-                dgvIssuedBooks.Rows.Add(txtCopyNo.Text);
-
-                //dgvIssuedBooks.Rows.Add(dgvBookDetails.SelectedColumns.ToString());
-            } 
-            else
-            {
-                MessageBox.Show("Please input Copy No before adding!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

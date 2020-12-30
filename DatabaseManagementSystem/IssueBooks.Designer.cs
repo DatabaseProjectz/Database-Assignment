@@ -31,13 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssueBooks));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.txtIssueNo = new System.Windows.Forms.TextBox();
             this.txtCopyNo = new System.Windows.Forms.TextBox();
             this.lblCopyNo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvIssuedBooks = new System.Windows.Forms.DataGridView();
-            this.CopyNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.dgvBookDetails = new System.Windows.Forms.DataGridView();
             this.btnCheckCopyNo = new System.Windows.Forms.Button();
             this.tdpBookReturn = new System.Windows.Forms.DateTimePicker();
@@ -65,7 +60,6 @@
             this.lblBookIssue = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).BeginInit();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).BeginInit();
@@ -82,18 +76,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 568);
+            this.panel1.Size = new System.Drawing.Size(950, 568);
             this.panel1.TabIndex = 0;
             // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.PeachPuff;
-            this.pnlRight.Controls.Add(this.txtIssueNo);
             this.pnlRight.Controls.Add(this.txtCopyNo);
             this.pnlRight.Controls.Add(this.lblCopyNo);
-            this.pnlRight.Controls.Add(this.label1);
-            this.pnlRight.Controls.Add(this.dgvIssuedBooks);
-            this.pnlRight.Controls.Add(this.btnAdd);
             this.pnlRight.Controls.Add(this.dgvBookDetails);
             this.pnlRight.Controls.Add(this.btnCheckCopyNo);
             this.pnlRight.Controls.Add(this.tdpBookReturn);
@@ -112,15 +102,8 @@
             this.pnlRight.Controls.Add(this.lblDetails);
             this.pnlRight.Location = new System.Drawing.Point(401, 73);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(669, 493);
+            this.pnlRight.Size = new System.Drawing.Size(549, 493);
             this.pnlRight.TabIndex = 2;
-            // 
-            // txtIssueNo
-            // 
-            this.txtIssueNo.Location = new System.Drawing.Point(536, 65);
-            this.txtIssueNo.Name = "txtIssueNo";
-            this.txtIssueNo.Size = new System.Drawing.Size(100, 20);
-            this.txtIssueNo.TabIndex = 49;
             // 
             // txtCopyNo
             // 
@@ -141,52 +124,6 @@
             this.lblCopyNo.TabIndex = 47;
             this.lblCopyNo.Text = "Copy No                        :";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(565, 369);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 46;
-            // 
-            // dgvIssuedBooks
-            // 
-            this.dgvIssuedBooks.AllowUserToAddRows = false;
-            this.dgvIssuedBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvIssuedBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvIssuedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIssuedBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CopyNo});
-            this.dgvIssuedBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvIssuedBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvIssuedBooks.Location = new System.Drawing.Point(516, 216);
-            this.dgvIssuedBooks.Name = "dgvIssuedBooks";
-            this.dgvIssuedBooks.ReadOnly = true;
-            this.dgvIssuedBooks.Size = new System.Drawing.Size(141, 83);
-            this.dgvIssuedBooks.TabIndex = 45;
-            this.dgvIssuedBooks.Visible = false;
-            // 
-            // CopyNo
-            // 
-            this.CopyNo.HeaderText = "     Copy No";
-            this.CopyNo.Name = "CopyNo";
-            this.CopyNo.ReadOnly = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Brown;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(468, 309);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(57, 23);
-            this.btnAdd.TabIndex = 44;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // dgvBookDetails
             // 
             this.dgvBookDetails.AllowUserToAddRows = false;
@@ -198,7 +135,7 @@
             this.dgvBookDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvBookDetails.Location = new System.Drawing.Point(19, 216);
             this.dgvBookDetails.Name = "dgvBookDetails";
-            this.dgvBookDetails.Size = new System.Drawing.Size(481, 83);
+            this.dgvBookDetails.Size = new System.Drawing.Size(506, 83);
             this.dgvBookDetails.TabIndex = 42;
             // 
             // btnCheckCopyNo
@@ -425,7 +362,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1070, 568);
+            this.pnlTop.Size = new System.Drawing.Size(950, 568);
             this.pnlTop.TabIndex = 0;
             // 
             // pictureBox1
@@ -445,7 +382,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(1042, 3);
+            this.btnCancel.Location = new System.Drawing.Point(922, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(25, 23);
             this.btnCancel.TabIndex = 19;
@@ -468,7 +405,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 568);
+            this.ClientSize = new System.Drawing.Size(950, 568);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IssueBooks";
@@ -478,7 +415,6 @@
             this.panel1.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookDetails)).EndInit();
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
@@ -519,12 +455,7 @@
         private System.Windows.Forms.Label lblMemberID;
         private System.Windows.Forms.Button btnCheckCopyNo;
         private System.Windows.Forms.DataGridView dgvBookDetails;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dgvIssuedBooks;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCopyNo;
         private System.Windows.Forms.Label lblCopyNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CopyNo;
-        private System.Windows.Forms.TextBox txtIssueNo;
     }
 }

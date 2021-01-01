@@ -107,7 +107,7 @@ namespace DatabaseManagementSystem
                         //If ISBN related book copy is not already issued, this copy issuing.
                         SqlCommand cmd = con.CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "INSERT INTO IssueInfo(B_ISBN, CopyNo, Member_ID, Fine, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + "" + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                        cmd.CommandText = "INSERT INTO IssueInfo(B_ISBN, CopyNo, Member_ID, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
                         cmd.ExecuteNonQuery();
                         con.Close();
 

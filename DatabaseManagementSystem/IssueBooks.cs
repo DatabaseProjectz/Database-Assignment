@@ -92,15 +92,29 @@ namespace DatabaseManagementSystem
                     con.ConnectionString = "data source = DESKTOP-VHPDJKD; database=LibraryManagementSystem; Integrated security=True";
                     con.Open();
 
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO IssueInfo(B_ISBN, CopyNo, Member_ID, Fine, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + "" + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                    // Check - Entered ISBN related book copy is already issued or not.
+                    SqlCommand check_isbn = new SqlCommand("SELECT COUNT(*) FROM [IssueInfo] WHERE ([B_ISBN] = @Bisbn)", con);
+                    check_isbn.Parameters.AddWithValue("@Bisbn", txtISBN.Text);
+                    int UserExist = (int)check_isbn.ExecuteScalar();
 
-                    //This message is displaying, when the data insert is successful.
-                    MessageBox.Show("Book Issued Successfully!", "Congradulations!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
+                    if (UserExist > 0)
+                    {
+                        //ISBN related book copy is already issued.
+                        MessageBox.Show("This book is already issued!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        //If ISBN related book copy is not already issued, this copy issuing.
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "INSERT INTO IssueInfo(B_ISBN, CopyNo, Member_ID, Fine, IssueDate, ReturnDate) VALUES ('" + txtISBN.Text + "' , '" + txtCopyNo.Text + "' , '" + txtMemberID.Text + "' , '" + "" + "' , '" + tdpBookIssue.Value.ToString("MM/dd/yyyy") + "' , '" + tdpBookReturn.Value.ToString("MM/dd/yyyy") + "')";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+
+                        //This message is displaying, when the data insert is successful.
+                        MessageBox.Show("Book Issued Successfully!", "Congradulations!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                    }                    
                 }
             }
             catch (Exception ex)  // Display an error message like this without crash the program, when the SQL part has an error.
@@ -157,7 +171,7 @@ namespace DatabaseManagementSystem
 
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT ISBN, B_Author, B_Name, B_Publisher, Copy.CopyNo FROM Book, Copy WHERE Book.ISBN = Copy.Copy_ISBN AND ISBN = '" + isbn + "' ";
+                    cmd.CommandText = "SELECT ISBN, B_Name, B_Author, B_PublishedDate, Copy.CopyNo FROM Book, Copy WHERE Book.ISBN = Copy.Copy_ISBN AND ISBN = '" + isbn + "' ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter DA = new SqlDataAdapter(cmd);

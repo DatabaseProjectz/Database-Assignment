@@ -28,7 +28,7 @@ namespace DatabaseManagementSystem
                          /* Search Member ID*/
             try
             {
-                if (txtMemberID.Text != "")   // Execute following these, when the Member ID textbox is not empty.
+                if (txtMemberID.Text != "")   // When the Member ID textbox is not empty, execute following these.
                 {
                     String Mid = txtMemberID.Text;
 
@@ -181,6 +181,7 @@ namespace DatabaseManagementSystem
 
                     dgvBookDetails.Show();
 
+                    //Calculate the return date
                     tdpBookReturn.Value = tdpBookIssue.Value.AddDays(14);
                 }
                 else   // Display a Warning message like this, when the ISBN textbox is empty.

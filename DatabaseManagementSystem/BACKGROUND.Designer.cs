@@ -109,7 +109,7 @@
             this.btnStudent.Name = "btnStudent";
             this.btnStudent.Size = new System.Drawing.Size(213, 72);
             this.btnStudent.TabIndex = 1;
-            this.btnStudent.Text = "STUDENT";
+            this.btnStudent.Text = "BORROWER";
             this.btnStudent.UseVisualStyleBackColor = false;
             // 
             // btnCompleteBookDetails
